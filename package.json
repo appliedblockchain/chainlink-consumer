@@ -1,0 +1,14 @@
+{
+  "private": "true",
+  "workspaces": [
+    "plugins/price-consumer",
+    "plugins/random-number-consumer",
+    "plugins/api-consumer",
+    "contracts",
+    "plugins-consumer",
+    "dapp"
+  ],
+  "devDependencies": {
+    "wsrun": "^5.2.4"
+  }
+}
