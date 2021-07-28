@@ -1,8 +1,8 @@
-# hardhat-example-plugin
+# chainlink-api-consumer
 
 _A one line description of the plugin_
 
-[Hardhat](https://hardhat.org) plugin example. 
+[Hardhat](https://hardhat.org) plugin example.
 
 ## What
 
@@ -39,7 +39,7 @@ import "<your plugin npm package name>";
 
 ## Tasks
 
-<_A description of each task added by this plugin. If it just overrides internal 
+<_A description of each task added by this plugin. If it just overrides internal
 tasks, this may not be needed_>
 
 This plugin creates no additional tasks.

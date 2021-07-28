@@ -7,7 +7,8 @@
     "test-integration": "hardhat test test/integration/APIConsumer_int_test.js --network localhost; hardhat test test/integration/RandomNumberConsumer_int_test.js --network localhost",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepublishOnly": "hardhat compile && rm -rf artifacts && rm -rf cache"
+    "compile": "hardhat compile",
+    "prepublishOnly": "npm run compile && rm -rf artifacts && rm -rf cache"
   },
   "license": "MIT",
   "devDependencies": {

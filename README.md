@@ -11,12 +11,14 @@ A monorepo with fully Chainlink working end to end scenarios.
 
 ## Install
 
+**Note:** Run next steps before using each package for development purposes.
+
 1. Install NodeJS 12.18 & Yarn
 2. Install repositories dependencies
 ```
-$ yarn install
+$ make install
 ```
 3. Build all packages
 ```
-$ yarn wsrun build
+$ make build
 ```
