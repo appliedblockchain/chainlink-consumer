@@ -2,6 +2,11 @@
 
 A monorepo with fully Chainlink working end to end scenarios.
 
+## Requirements
+
+- [NPM](https://www.npmjs.com/)
+- [YARN](https://yarnpkg.com/)
+
 ## Project Structure
 
 * `contracts` - Smart contracts consumers that interact with oracles and Chainlink coordinators

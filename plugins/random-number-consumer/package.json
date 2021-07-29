@@ -29,6 +29,7 @@
   ],
   "devDependencies": {
     "@chainlink-consumer/contracts": "0.0.1",
+    "@ethersproject/contracts": "^5.4.0",
     "@nomiclabs/buidler": "^1.4.8",
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@types/chai": "^4.1.7",

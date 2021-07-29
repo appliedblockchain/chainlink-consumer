@@ -1,10 +1,10 @@
+import * as chai from "chai";
+import chaiAsPromised from "chai-as-promised";
 import { resetHardhatContext } from "hardhat/plugins-testing";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import path from "path";
-import * as chai from 'chai'
-import chaiAsPromised from 'chai-as-promised'
 
-chai.use(chaiAsPromised)
+chai.use(chaiAsPromised);
 declare module "mocha" {
   interface Context {
     hre: HardhatRuntimeEnvironment;

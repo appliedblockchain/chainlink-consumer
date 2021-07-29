@@ -6,8 +6,10 @@
 </p>
 <br/>
 
-# Chainlink Hardhat Box
- Implementation of the following 3 Chainlink features using the [Hardhat](https://hardhat.org/) development environment:
+# Plugins Consumer
+Example of project uses chainlink plugins to setup tasks.
+
+Implementation of the following 3 Chainlink features using the [Hardhat](https://hardhat.org/) development environment:
  - [Request & Receive data](https://docs.chain.link/docs/request-and-receive-data)
  - [Chainlink Price Feeds](https://docs.chain.link/docs/using-chainlink-reference-contracts)
  - [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf)
