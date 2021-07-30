@@ -8,6 +8,7 @@ artifacts
 cache
 deployments
 node_modules
+types
 
 # don't push the environment vars!
 .env

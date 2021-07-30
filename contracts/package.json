@@ -15,6 +15,8 @@
     "@nomiclabs/hardhat-ethers": "^2.0.1",
     "@nomiclabs/hardhat-etherscan": "^2.1.1",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@typechain/ethers-v5": "^7.0.1",
+    "@typechain/hardhat": "^2.2.0",
     "chai": "^4.2.0",
     "chai-bignumber": "^3.0.0",
     "chai-bn": "^0.2.1",
@@ -23,6 +25,7 @@
     "hardhat": "^2.0.6",
     "hardhat-abi-exporter": "^2.2.1",
     "hardhat-deploy": "^0.7.0-beta.39",
+    "typechain": "^5.1.2",
     "web3": "^1.2.9"
   },
   "dependencies": {

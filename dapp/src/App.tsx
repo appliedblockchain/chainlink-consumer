@@ -1,54 +1,67 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import logo from './logo.svg';
-import './App.css';
-import Home from './features/Home';
-import PriceConsumer from './features/PriceConsumer';
-import VRF from './features/VRF';
-import APIConsumer from './features/APIConsumer';
+import React, { useContext } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import "./App.css";
+import { ConnectWallet } from "./components/ConnectWallet";
+import { Loading } from "./components/Loading";
+import Navbar from "./components/Navbar";
+import APIConsumer from "./features/APIConsumer";
+import Home from "./features/Home";
+import PriceConsumer from "./features/PriceConsumer";
+import VRF from "./features/VRF";
+import { BlockchainContext } from "./providers/BlockchainProvider";
 
 function App() {
+  const {
+    connectWallet,
+    isConnectingWallet,
+    selectedAddress,
+    networkError,
+    dismissNetworkError,
+  } = useContext(BlockchainContext);
+
+  if (isConnectingWallet) {
+    return <Loading />;
+  }
+
+  if (!selectedAddress || networkError) {
+    return (
+      <ConnectWallet
+        connectWallet={connectWallet}
+        networkError={networkError}
+        dismiss={dismissNetworkError}
+      />
+    );
+  }
+
   return (
     <Router>
-    <div>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/price-consumer">Price Consumer</Link>
-        </li>
-        <li>
-          <Link to="/vrf">VRF</Link>
-        </li>
-        <li>
-          <Link to="/api-consumer">API Consumer</Link>
-        </li>
-      </ul>
+      <div>
+        <Navbar address={selectedAddress} />
 
-      <hr />
-
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/price-consumer">
-          <PriceConsumer />
-        </Route>
-        <Route path="/vrf">
-          <VRF />
-        </Route>
-        <Route path="/api-consumer">
-          <APIConsumer />
-        </Route>
-      </Switch>
-    </div>
-  </Router>
+        <Container>
+          <Row>
+            <Col className="pt-3">
+              <Switch>
+                <Route exact path="/">
+                  <Home />
+                </Route>
+                <Route path="/price-consumer">
+                  <PriceConsumer />
+                </Route>
+                <Route path="/vrf">
+                  <VRF />
+                </Route>
+                <Route path="/api-consumer">
+                  <APIConsumer />
+                </Route>
+              </Switch>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </Router>
   );
 }
 

@@ -5,6 +5,7 @@ require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-truffle5");
 require("@nomiclabs/hardhat-etherscan");
+require('@typechain/hardhat')
 require("hardhat-abi-exporter");
 require("hardhat-deploy");
 
@@ -112,4 +113,7 @@ module.exports = {
     flat: true,
     spacing: 2,
   },
+  typechain: {
+    outDir: 'types',
+  }
 };
