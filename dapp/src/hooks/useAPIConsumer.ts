@@ -3,7 +3,13 @@ import { useCallback, useEffect, useState } from "react";
 
 import getAPIConsumerContract from "../lib/getAPIConsumerContract";
 
-const useAPIConsumer = (address: string) => {
+interface APIConsumerHookState {
+  volume: string
+  volumeCallError: string
+  getVolume: () => Promise<void>
+}
+
+const useAPIConsumer = (address: string): APIConsumerHookState => {
   const [volume, setVolume] = useState("");
   const [volumeCallError, setVolumeCallError] = useState("");
 

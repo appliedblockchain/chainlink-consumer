@@ -2,7 +2,13 @@ import { useState } from "react";
 
 import getRandomNumberConsumer from "../lib/getRandomNumberConsumerContract";
 
-const useRequestRandomNumber = (address: string) => {
+interface RequestRandomNumberHookState {
+  requestNewRandomNumber: () => Promise<void>
+  requestRandomNumberCallError: string
+  requestRandomNumberTxHash: string
+}
+
+const useRequestRandomNumber = (address: string): RequestRandomNumberHookState => {
   const [
     requestRandomNumberCallError,
     setRequestRandomNumberCallError,

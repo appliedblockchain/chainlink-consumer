@@ -1,16 +1,14 @@
-import PriceConsumerV3ABI from "@chainlink-consumer/contracts/abi/PriceConsumerV3.json";
-import { Contract, ethers } from "ethers";
-// import { PriceConsumerV3__factory } from '@chainlink-consumer/contracts/types/factories/PriceConsumerV3__factory';
+import { ethers } from "ethers";
 import { useCallback, useEffect, useState } from "react";
+import getPriceConsumer from "../lib/getPriceConsumerContract";
 
-function getPriceConsumer(address: string) {
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-
-  return new Contract(address, PriceConsumerV3ABI, provider?.getSigner(0));
-  // priceConsumer = PriceConsumerV3Factory.connect("0x916c131fcb12C961c291b325d7CF250EDdBc78Dd", window.ethereum)
+interface PriceConsumerHookState {
+  latestPrice: string
+  latestPriceCallError: string
+  getLatestPrice: () => Promise<void>
 }
 
-const usePriceConsumer = (address: string) => {
+const usePriceConsumer = (address: string): PriceConsumerHookState => {
   const [latestPrice, setLatestPrice] = useState("");
   const [latestPriceCallError, setLatestPriceCallError] = useState("");
 

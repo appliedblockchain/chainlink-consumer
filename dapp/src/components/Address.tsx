@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { FormControl, FormGroup, FormLabel } from "react-bootstrap";
 
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
   setAddress: (address: string) => void;
 }
 
-const Address = ({ address, setAddress }: Props) => {
+const Address: FunctionComponent<Props> = ({ address, setAddress }) => {
   return (
     <FormGroup className="mb-2">
       <FormLabel>Contract Address</FormLabel>

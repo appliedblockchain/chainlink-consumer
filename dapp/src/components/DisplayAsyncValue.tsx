@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from "react";
+import { FunctionComponent } from "react";
 import { Button, FormLabel } from "react-bootstrap";
 import { ArrowRepeat } from "react-bootstrap-icons";
 
@@ -11,7 +12,7 @@ interface Props {
   refresh?: () => Promise<void>;
 }
 
-const DisplayAsyncValue = ({ label, value, error, refresh }: Props) => {
+const DisplayAsyncValue: FunctionComponent<Props> = ({ label, value, error, refresh }) => {
   const [refreshPending, setRefreshPending] = useState(false);
   const onRefresh = useCallback(async () => {
     if (!refresh) {

@@ -2,6 +2,7 @@ import React, { createContext, FunctionComponent } from "react";
 
 import useConnectWallet from "../hooks/useConnectWallet";
 
+
 interface ContextFields {
   isConnectingWallet: boolean;
   selectedAddress: string;
@@ -9,17 +10,23 @@ interface ContextFields {
   connectWallet: () => Promise<void>;
   disconnectWallet: () => Promise<void>;
   dismissNetworkError: () => void;
+  installMetamask: () => void;
   chainID: string;
+  metamaskInstalled: boolean;
 }
+
+const FunctionNotInitialized = () => { throw new Error("function not initialized") }
 
 export const BlockchainContext = createContext<ContextFields>({
   isConnectingWallet: false,
   selectedAddress: "",
   networkError: "",
-  connectWallet: async () => {},
-  disconnectWallet: async () => {},
-  dismissNetworkError: async () => {},
+  connectWallet: FunctionNotInitialized,
+  disconnectWallet: FunctionNotInitialized,
+  dismissNetworkError: FunctionNotInitialized,
+  installMetamask: FunctionNotInitialized,
   chainID: "",
+  metamaskInstalled: false,
 });
 
 const BlockchainProvider: FunctionComponent = ({ children }) => {

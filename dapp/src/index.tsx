@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import ReactDOM from "react-dom";
+import { providers } from 'ethers'
 
 import App from "./App";
 import "./index.css";
@@ -8,7 +9,7 @@ import BlockchainProvider from "./providers/BlockchainProvider";
 import reportWebVitals from "./reportWebVitals";
 declare global {
   interface Window {
-    ethereum: any;
+    ethereum: providers.ExternalProvider
   }
 }
 

@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from "react";
 
-const PageTitle: FunctionComponent<{}> = (props) => (
+const PageTitle: FunctionComponent = ({ children }) => (
   <div className="mb-3">
-    <h2>{props.children}</h2>
+    <h2>{children}</h2>
   </div>
 );
 

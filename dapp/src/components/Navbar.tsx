@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -6,7 +6,7 @@ interface Props {
   address: string;
 }
 
-const CustomNavbar = ({ address }: Props) => (
+const CustomNavbar: FunctionComponent<Props> = ({ address }) => (
   <Navbar bg="dark" variant="dark">
     <Container>
       <Navbar.Brand href="/">Brand link</Navbar.Brand>

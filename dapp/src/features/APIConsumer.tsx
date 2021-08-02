@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FunctionComponent, useState } from "react";
 
 import Address from "../components/Address";
 import DisplayAsyncValue from "../components/DisplayAsyncValue";
@@ -7,7 +7,7 @@ import RequestNewValueForm from "../components/RequestNewValueForm";
 import useAPIConsumer from "../hooks/useAPIConsumer";
 import useAPIConsumerRequestData from "../hooks/useAPIConsumerRequestData";
 
-const APIConsumer = () => {
+const APIConsumer: FunctionComponent = () => {
   const [address, setAddress] = useState("");
   const { volume, volumeCallError, getVolume } = useAPIConsumer(address);
   const {

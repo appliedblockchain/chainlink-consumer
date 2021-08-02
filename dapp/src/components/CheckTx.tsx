@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { FunctionComponent, useContext } from "react";
 
 import { BlockchainContext } from "../providers/BlockchainProvider";
 
@@ -14,7 +14,7 @@ interface Props {
   txHash: string;
 }
 
-const CheckTx = ({ txHash }: Props) => {
+const CheckTx: FunctionComponent<Props> = ({ txHash }) => {
   const { chainID } = useContext(BlockchainContext);
 
   return (

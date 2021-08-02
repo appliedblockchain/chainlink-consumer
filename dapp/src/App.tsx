@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { FunctionComponent, useContext } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
-import { ConnectWallet } from "./components/ConnectWallet";
-import { Loading } from "./components/Loading";
+import ConnectWallet from "./components/ConnectWallet";
+import Loading from "./components/Loading";
 import Navbar from "./components/Navbar";
 import APIConsumer from "./features/APIConsumer";
 import Home from "./features/Home";
@@ -12,14 +12,17 @@ import PriceConsumer from "./features/PriceConsumer";
 import VRF from "./features/VRF";
 import { BlockchainContext } from "./providers/BlockchainProvider";
 
-function App() {
+const App: FunctionComponent = () => {
   const {
     connectWallet,
     isConnectingWallet,
     selectedAddress,
     networkError,
     dismissNetworkError,
+    metamaskInstalled,
+    installMetamask
   } = useContext(BlockchainContext);
+
 
   if (isConnectingWallet) {
     return <Loading />;
@@ -31,6 +34,8 @@ function App() {
         connectWallet={connectWallet}
         networkError={networkError}
         dismiss={dismissNetworkError}
+        installMetamask={installMetamask}
+        metamaskInstalled={metamaskInstalled}
       />
     );
   }

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { FunctionComponent, useState } from "react";
 
 import Address from "../components/Address";
 import DisplayAsyncValue from "../components/DisplayAsyncValue";
 import PageTitle from "../components/PageTitle";
 import usePriceConsumer from "../hooks/usePriceConsumer";
 
-const PriceConsumer = () => {
+const PriceConsumer: FunctionComponent = () => {
   const [address, setAddress] = useState("");
   const {
     latestPrice,

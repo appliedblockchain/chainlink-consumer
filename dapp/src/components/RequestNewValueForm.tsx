@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { Button } from "react-bootstrap";
 
 import CheckTx from "./CheckTx";
@@ -11,12 +11,12 @@ interface Props {
   txHash: string;
 }
 
-const RequestNewValueForm = ({
+const RequestNewValueForm: FunctionComponent<Props> = ({
   requestNewValue,
   disabled,
   error,
   txHash,
-}: Props) => (
+}) => (
   <form
     onSubmit={(e) => {
       e.preventDefault();

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 
 interface Props {
   message: string;
   dismiss: () => void;
 }
 
-export function NetworkErrorMessage({ message, dismiss }: Props) {
+const NetworkErrorMessage: FunctionComponent<Props> = ({ message, dismiss }) => {
   return (
     <div className="alert alert-danger" role="alert">
       {message}
@@ -21,3 +21,5 @@ export function NetworkErrorMessage({ message, dismiss }: Props) {
     </div>
   );
 }
+
+export default NetworkErrorMessage

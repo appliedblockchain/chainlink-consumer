@@ -1,15 +1,18 @@
 import React from "react";
+import { FunctionComponent } from "react";
 import { Button } from "react-bootstrap";
 
-import { NetworkErrorMessage } from "./NetworkErrorMessage";
+import NetworkErrorMessage from "./NetworkErrorMessage";
 
 interface Props {
   connectWallet: () => Promise<void>;
   networkError: string | undefined;
   dismiss: () => void;
+  metamaskInstalled: boolean
+  installMetamask: () => void
 }
 
-export function ConnectWallet({ connectWallet, networkError, dismiss }: Props) {
+const ConnectWallet: FunctionComponent<Props> = ({ connectWallet, networkError, dismiss, metamaskInstalled, installMetamask }) => {
   return (
     <div className="container">
       <div className="row justify-content-md-center">
@@ -19,15 +22,28 @@ export function ConnectWallet({ connectWallet, networkError, dismiss }: Props) {
           )}
         </div>
         <div className="col-6 p-4 text-center">
-          <p>Please connect to your wallet.</p>
-          <Button
-            variant="dark"
-            onClick={connectWallet}
-          >
-            Connect Wallet
-          </Button>
+          {
+            metamaskInstalled ?
+              <>
+                <p>Please connect to your wallet.</p>
+                <Button
+                  variant="dark"
+                  onClick={connectWallet}
+                >
+                  Connect Wallet
+                </Button>
+              </> :
+              <Button
+                variant="dark"
+                onClick={installMetamask}
+              >
+                Install Metamask
+              </Button>
+          }
         </div>
       </div>
     </div>
   );
 }
+
+export default ConnectWallet

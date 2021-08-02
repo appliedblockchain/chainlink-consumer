@@ -2,7 +2,14 @@ import { useState } from "react";
 
 import getAPIConsumerContract from "../lib/getAPIConsumerContract";
 
-const useAPIConsumerRequestData = (address: string) => {
+interface APIConsumerRequestDataHookState {
+  requestData: () => Promise<void>
+  requestDataCallError: string
+  requestDataTxHash: string
+  requestPending: boolean
+}
+
+const useAPIConsumerRequestData = (address: string): APIConsumerRequestDataHookState => {
   const [requestDataCallError, setRequestDataCallError] = useState("");
   const [requestDataTxHash, setRequestDataTxHash] = useState("");
   const [requestPending, setRequestPending] = useState(false);

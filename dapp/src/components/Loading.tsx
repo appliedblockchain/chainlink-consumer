@@ -1,6 +1,6 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 
-export function Loading() {
+const Loading: FunctionComponent = () => {
   return (
     <div
       style={{
@@ -27,9 +27,10 @@ export function Loading() {
         }}
       >
         <div className="spinner-border" role="status">
-          <span className="sr-only">Loading...</span>
         </div>
       </div>
     </div>
   );
 }
+
+export default Loading

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FunctionComponent, useState } from "react";
 
 import Address from "../components/Address";
 import DisplayAsyncValue from "../components/DisplayAsyncValue";
@@ -7,7 +7,7 @@ import RequestNewValueForm from "../components/RequestNewValueForm";
 import useRandomNumber from "../hooks/useRandomNumber";
 import useRequestRandomNumber from "../hooks/useRequestRandomNumber";
 
-const VRF = () => {
+const VRF: FunctionComponent = () => {
   const [address, setAddress] = useState("");
   const {
     randomResult,
