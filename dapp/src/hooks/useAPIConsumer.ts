@@ -9,12 +9,12 @@ interface APIConsumerHookState {
   getVolume: () => Promise<void>
 }
 
-const useAPIConsumer = (address: string): APIConsumerHookState => {
+const useAPIConsumer = (provider: ethers.providers.Web3Provider | undefined, address: string): APIConsumerHookState => {
   const [volume, setVolume] = useState("");
   const [volumeCallError, setVolumeCallError] = useState("");
 
   const getVolume = useCallback(() => {
-    return getAPIConsumerContract(address)
+    return getAPIConsumerContract(provider, address)
       .volume()
       .then((res: ethers.BigNumber) => res.toString())
       .then(setVolume)
@@ -22,7 +22,7 @@ const useAPIConsumer = (address: string): APIConsumerHookState => {
         console.error(e);
         setVolumeCallError("Invalid api consumer contract address.");
       });
-  }, [address]);
+  }, [address, provider]);
 
   useEffect(() => {
     if (!address) {

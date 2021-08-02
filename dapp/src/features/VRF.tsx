@@ -1,4 +1,5 @@
 import React, { FunctionComponent, useState } from "react";
+import { useContext } from "react";
 
 import Address from "../components/Address";
 import DisplayAsyncValue from "../components/DisplayAsyncValue";
@@ -6,19 +7,21 @@ import PageTitle from "../components/PageTitle";
 import RequestNewValueForm from "../components/RequestNewValueForm";
 import useRandomNumber from "../hooks/useRandomNumber";
 import useRequestRandomNumber from "../hooks/useRequestRandomNumber";
+import { BlockchainContext } from "../providers/BlockchainProvider";
 
 const VRF: FunctionComponent = () => {
   const [address, setAddress] = useState("");
+  const { provider } = useContext(BlockchainContext)
   const {
     randomResult,
     randomResultCallError,
     getRandomNumber,
-  } = useRandomNumber(address);
+  } = useRandomNumber(provider, address);
   const {
     requestNewRandomNumber,
     requestRandomNumberCallError,
     requestRandomNumberTxHash,
-  } = useRequestRandomNumber(address);
+  } = useRequestRandomNumber(provider, address);
 
   return (
     <div>

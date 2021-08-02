@@ -9,12 +9,12 @@ interface RandomNumberHookState {
   getRandomNumber: () => Promise<void>
 }
 
-const useRandomNumber = (address: string): RandomNumberHookState => {
+const useRandomNumber = (provider: ethers.providers.Web3Provider | undefined, address: string): RandomNumberHookState => {
   const [randomResult, setRandomResult] = useState("");
   const [randomResultCallError, setRandomResultCallError] = useState("");
 
   const getRandomNumber = useCallback(() => {
-    return getRandomNumberConsumer(address)
+    return getRandomNumberConsumer(provider, address)
       .randomResult()
       .then((res: ethers.BigNumber) => res.toString())
       .then(setRandomResult)
@@ -22,7 +22,7 @@ const useRandomNumber = (address: string): RandomNumberHookState => {
         console.error(e);
         setRandomResultCallError("Invalid random number contract address.");
       });
-  }, [address]);
+  }, [address, provider]);
 
   useEffect(() => {
     if (!address) {

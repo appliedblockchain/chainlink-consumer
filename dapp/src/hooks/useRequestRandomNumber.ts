@@ -1,3 +1,4 @@
+import { ethers } from "ethers";
 import { useState } from "react";
 
 import getRandomNumberConsumer from "../lib/getRandomNumberConsumerContract";
@@ -8,7 +9,7 @@ interface RequestRandomNumberHookState {
   requestRandomNumberTxHash: string
 }
 
-const useRequestRandomNumber = (address: string): RequestRandomNumberHookState => {
+const useRequestRandomNumber = (provider: ethers.providers.Web3Provider | undefined, address: string): RequestRandomNumberHookState => {
   const [
     requestRandomNumberCallError,
     setRequestRandomNumberCallError,
@@ -23,7 +24,7 @@ const useRequestRandomNumber = (address: string): RequestRandomNumberHookState =
 
     try {
       setRequestRandomNumberCallError("");
-      const tx = await getRandomNumberConsumer(address).getRandomNumber();
+      const tx = await getRandomNumberConsumer(provider, address).getRandomNumber();
       await tx.wait();
       setRequestRandomNumberTxHash(tx.hash);
     } catch (e) {

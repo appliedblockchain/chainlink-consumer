@@ -1,17 +1,20 @@
 import React, { FunctionComponent, useState } from "react";
+import { useContext } from "react";
 
 import Address from "../components/Address";
 import DisplayAsyncValue from "../components/DisplayAsyncValue";
 import PageTitle from "../components/PageTitle";
 import usePriceConsumer from "../hooks/usePriceConsumer";
+import { BlockchainContext } from "../providers/BlockchainProvider";
 
 const PriceConsumer: FunctionComponent = () => {
   const [address, setAddress] = useState("");
+  const { provider } = useContext(BlockchainContext)
   const {
     latestPrice,
     latestPriceCallError,
     getLatestPrice,
-  } = usePriceConsumer(address);
+  } = usePriceConsumer(provider, address);
 
   return (
     <div>

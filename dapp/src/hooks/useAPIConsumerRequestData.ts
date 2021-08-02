@@ -1,3 +1,4 @@
+import { ethers } from "ethers";
 import { useState } from "react";
 
 import getAPIConsumerContract from "../lib/getAPIConsumerContract";
@@ -9,7 +10,7 @@ interface APIConsumerRequestDataHookState {
   requestPending: boolean
 }
 
-const useAPIConsumerRequestData = (address: string): APIConsumerRequestDataHookState => {
+const useAPIConsumerRequestData = (provider: ethers.providers.Web3Provider | undefined, address: string): APIConsumerRequestDataHookState => {
   const [requestDataCallError, setRequestDataCallError] = useState("");
   const [requestDataTxHash, setRequestDataTxHash] = useState("");
   const [requestPending, setRequestPending] = useState(false);
@@ -21,7 +22,7 @@ const useAPIConsumerRequestData = (address: string): APIConsumerRequestDataHookS
     try {
       setRequestPending(true);
       setRequestDataCallError("");
-      const tx = await getAPIConsumerContract(address).requestVolumeData();
+      const tx = await getAPIConsumerContract(provider, address).requestVolumeData();
       await tx.wait();
       setRequestDataTxHash(tx.hash);
       setRequestPending(false);

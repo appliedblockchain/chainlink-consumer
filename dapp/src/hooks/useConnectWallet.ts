@@ -12,6 +12,7 @@ interface ConnectWalletHookState {
   installMetamask: () => void
   chainID: string
   metamaskInstalled: boolean
+  provider?: ethers.providers.Web3Provider
 }
 
 const useConnectWallet = (): ConnectWalletHookState => {
@@ -122,7 +123,8 @@ const useConnectWallet = (): ConnectWalletHookState => {
     dismissNetworkError,
     installMetamask,
     chainID,
-    metamaskInstalled: MetaMaskOnboarding.isMetaMaskInstalled()
+    metamaskInstalled: MetaMaskOnboarding.isMetaMaskInstalled(),
+    provider
   };
 };
 

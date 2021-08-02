@@ -8,12 +8,12 @@ interface PriceConsumerHookState {
   getLatestPrice: () => Promise<void>
 }
 
-const usePriceConsumer = (address: string): PriceConsumerHookState => {
+const usePriceConsumer = (provider: ethers.providers.Web3Provider | undefined, address: string): PriceConsumerHookState => {
   const [latestPrice, setLatestPrice] = useState("");
   const [latestPriceCallError, setLatestPriceCallError] = useState("");
 
   const getLatestPrice = useCallback(() => {
-    return getPriceConsumer(address)
+    return getPriceConsumer(provider, address)
       .getLatestPrice()
       .then((res: ethers.BigNumber) => res.toString())
       .then(setLatestPrice)
@@ -21,7 +21,7 @@ const usePriceConsumer = (address: string): PriceConsumerHookState => {
         console.error(e);
         setLatestPriceCallError("Invalid price consumer contract address.");
       });
-  }, [address]);
+  }, [address, provider]);
 
   useEffect(() => {
     if (!address) {
