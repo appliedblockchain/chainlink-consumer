@@ -1,6 +1,5 @@
 import { DeployFunction } from "hardhat-deploy/dist/types";
-
-const { networkConfig, autoFundCheck } = require("../helper-hardhat-config");
+import { networkConfig, autoFundCheck } from "../helper-hardhat-config";
 
 const SetupContracts: DeployFunction = async ({
   deployments,
@@ -28,30 +27,28 @@ const SetupContracts: DeployFunction = async ({
 
   //Try Auto-fund APIConsumer contract with LINK
   const APIConsumer = await deployments.get("APIConsumer");
-  const apiConsumer = await ethers.getContractAt(
-    "APIConsumer",
-    APIConsumer.address
-  );
 
   if (
-    await autoFundCheck(
+    linkTokenAddress &&
+    (await autoFundCheck(
       getChainId,
       web3,
-      apiConsumer.address,
+      ethers,
+      APIConsumer.address,
       networkName,
       linkTokenAddress,
       additionalMessage
-    )
+    ))
   ) {
     await run("fund-link", {
-      contract: apiConsumer.address,
+      contract: APIConsumer.address,
       linkaddress: linkTokenAddress,
     });
   } else {
     log("Then run API Consumer contract with following command:");
     log(
       "npx hardhat request-data --contract " +
-        apiConsumer.address +
+        APIConsumer.address +
         " --network " +
         networkName
     );
@@ -61,31 +58,28 @@ const SetupContracts: DeployFunction = async ({
   //Now try Auto-fund VRFConsumer contract
 
   const RandomNumberConsumer = await deployments.get("RandomNumberConsumer");
-  const randomNumberConsumer = await ethers.getContractAt(
-    "RandomNumberConsumer",
-    RandomNumberConsumer.address
-  );
 
   if (
-    await autoFundCheck(
+    linkTokenAddress &&
+    (await autoFundCheck(
       getChainId,
       web3,
       ethers,
-      randomNumberConsumer.address,
+      RandomNumberConsumer.address,
       networkName,
       linkTokenAddress,
       additionalMessage
-    )
+    ))
   ) {
     await run("fund-link", {
-      contract: randomNumberConsumer.address,
+      contract: RandomNumberConsumer.address,
       linkaddress: linkTokenAddress,
     });
   } else {
     log("Then run RandomNumberConsumer contract with the following command:");
     log(
       "npx hardhat request-random-number --contract " +
-        randomNumberConsumer.address +
+        RandomNumberConsumer.address +
         " --network " +
         networkName
     );

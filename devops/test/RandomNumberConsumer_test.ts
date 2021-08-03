@@ -11,15 +11,15 @@ describe("RandomNumberConsumer", function () {
     await deployments.fixture(["mocks", "vrf"]);
 
     const LinkToken = await deployments.get("LinkToken");
-    linkToken = await ethers.getContractAt("LinkToken", LinkToken.address);
+    linkToken = await ethers.getContractAt(LinkToken.abi, LinkToken.address);
     const RandomNumberConsumer = await deployments.get("RandomNumberConsumer");
     randomNumberConsumer = await ethers.getContractAt(
-      "RandomNumberConsumer",
+      RandomNumberConsumer.abi,
       RandomNumberConsumer.address
     );
     const VRFCoordinatorMock = await deployments.get("VRFCoordinatorMock");
     vrfCoordinatorMock = await ethers.getContractAt(
-      "VRFCoordinatorMock",
+      VRFCoordinatorMock.abi,
       VRFCoordinatorMock.address
     );
   });

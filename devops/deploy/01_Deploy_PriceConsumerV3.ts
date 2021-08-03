@@ -1,4 +1,4 @@
-import { getNetworkFromName, networkConfig } from "./../helper-hardhat-config";
+import { getNetworkFromName, networkConfig } from "../helper-hardhat-config";
 import { DeployFunction } from "hardhat-deploy/dist/types";
 
 const DeployPriceConsumer: DeployFunction = async ({

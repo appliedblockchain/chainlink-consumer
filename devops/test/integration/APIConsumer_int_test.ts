@@ -12,7 +12,7 @@ skipDescribeIf(developmentChains.includes(network.name))(
     beforeEach(async () => {
       const APIConsumer = await deployments.get("APIConsumer");
       apiConsumer = await ethers.getContractAt(
-        "APIConsumer",
+        APIConsumer.abi,
         APIConsumer.address
       );
     });

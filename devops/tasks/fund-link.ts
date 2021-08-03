@@ -1,5 +1,6 @@
 import { task } from "hardhat/config";
 import { getNetworkFromName } from "../helper-hardhat-config";
+import ERC677ABI from "@chainlink-consumer/contracts/abi/ERC677.json";
 
 task("fund-link", "Funds a contract with LINK")
   .addParam("contract", "The address of the contract that requires LINK")
@@ -19,7 +20,6 @@ task("fund-link", "Funds a contract with LINK")
       "Funding contract " + contractAddr + " on network " + network.name
     );
     const linkTokenAddress = networkConfig.linkToken || taskArgs.linkaddress;
-    const LinkToken = await ethers.getContractFactory("LinkToken");
 
     //Get signer information
     const accounts = await ethers.getSigners();
@@ -28,7 +28,7 @@ task("fund-link", "Funds a contract with LINK")
     //Create connection to LINK token contract and initiate the transfer
     const linkTokenContract = new ethers.Contract(
       linkTokenAddress,
-      LinkToken.interface,
+      ERC677ABI,
       signer
     );
     const transferTransaction = await linkTokenContract.transfer(

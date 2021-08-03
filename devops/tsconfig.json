@@ -7,11 +7,11 @@
     "sourceMap": true,
     "outDir": "./dist",
     "strict": true,
-    "rootDirs": [],
+    "rootDirs": ["./tasks", "./test", "./deploy"],
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
   "exclude": ["dist", "node_modules"],
-  "include": [],
+  "include": ["./test", "./tasks", "./deploy", "../contracts/tasks/export-bytecode"],
   "files": ["./hardhat.config.ts"]
 }

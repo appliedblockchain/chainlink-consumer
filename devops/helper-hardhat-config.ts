@@ -1,6 +1,7 @@
 import { HardhatEthersHelpers } from "@nomiclabs/hardhat-ethers/types";
 import { ethers } from "ethers";
 import Web3 from "web3";
+import ERC667ABI from "@chainlink-consumer/contracts/abi/ERC677.json";
 
 interface NetworkConfig {
   name: string;
@@ -103,10 +104,9 @@ export const autoFundCheck = async (
   //check to see if user has enough LINK
   const accounts = await ethers.getSigners();
   const signer = accounts[0];
-  const LinkToken = await ethers.getContractFactory("LinkToken");
   const linkTokenContract = new ethers.Contract(
     linkTokenAddress,
-    LinkToken.interface,
+    ERC667ABI,
     signer
   );
   const balanceHex = await linkTokenContract.balanceOf(signer.address);

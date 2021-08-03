@@ -19,7 +19,7 @@ skipDescribeIf(!developmentChains.includes(network.name))(
       const chainId = await getChainId();
       await deployments.fixture(["mocks", "api"]);
       const LinkToken = await deployments.get("LinkToken");
-      linkToken = await ethers.getContractAt("LinkToken", LinkToken.address);
+      linkToken = await ethers.getContractAt(LinkToken.abi, LinkToken.address);
       const networkName = networkConfig[chainId]["name"];
 
       const linkTokenAddress = linkToken.address;
@@ -27,7 +27,7 @@ skipDescribeIf(!developmentChains.includes(network.name))(
 
       const APIConsumer = await deployments.get("APIConsumer");
       apiConsumer = await ethers.getContractAt(
-        "APIConsumer",
+        APIConsumer.abi,
         APIConsumer.address
       );
 

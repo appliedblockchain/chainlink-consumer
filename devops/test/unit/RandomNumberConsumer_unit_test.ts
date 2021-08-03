@@ -18,7 +18,7 @@ skipDescribeIf(!developmentChains.includes(network.name))(
       await deployments.fixture(["mocks", "vrf"]);
       const LinkToken = await deployments.get("LinkToken");
       const linkToken = await ethers.getContractAt(
-        "LinkToken",
+        LinkToken.abi,
         LinkToken.address
       );
       const networkName = networkConfig[chainId]["name"];
@@ -30,7 +30,7 @@ skipDescribeIf(!developmentChains.includes(network.name))(
         "RandomNumberConsumer"
       );
       randomNumberConsumer = await ethers.getContractAt(
-        "RandomNumberConsumer",
+        RandomNumberConsumer.abi,
         RandomNumberConsumer.address
       );
 

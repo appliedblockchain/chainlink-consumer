@@ -1,5 +1,7 @@
 import { task } from "hardhat/config";
 import { getNetworkFromName } from "../helper-hardhat-config";
+import ERC677ABI from "@chainlink-consumer/contracts/abi/ERC677.json";
+import RandomNumberConsumerABI from "@chainlink-consumer/contracts/abi/RandomNumberConsumer.json";
 
 task("withdraw-link", "Returns any LINK left in deployed contract")
   .addParam("contract", "The address of the contract")
@@ -18,10 +20,9 @@ task("withdraw-link", "Returns any LINK left in deployed contract")
 
     //First, lets see if there is any LINK to withdraw
     const linkTokenAddress = networkConfig.linkToken || taskArgs.linkaddress;
-    const LinkToken = await ethers.getContractFactory("LinkToken");
     const linkTokenContract = new ethers.Contract(
       linkTokenAddress,
-      LinkToken.interface,
+      ERC677ABI,
       signer
     );
     const balanceHex = await linkTokenContract.balanceOf(contractAddr);
@@ -34,15 +35,10 @@ task("withdraw-link", "Returns any LINK left in deployed contract")
     );
 
     if (+balance > 0) {
-      //Could also be Any-API contract, but in either case the function signature is the same, so we just need to use one
-      const RandomNumberConsumer = await ethers.getContractFactory(
-        "RandomNumberConsumer"
-      );
-
       //Create connection to Consumer Contract and call the withdraw function
       const ConsumerContract = new ethers.Contract(
         contractAddr,
-        RandomNumberConsumer.interface,
+        RandomNumberConsumerABI,
         signer
       );
       const result = await ConsumerContract.withdrawLink();

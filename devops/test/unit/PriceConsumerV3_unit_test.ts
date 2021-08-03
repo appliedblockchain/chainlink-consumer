@@ -1,4 +1,4 @@
-import { skipDescribeIf } from "./../test-utils";
+import { skipDescribeIf } from "../test-utils";
 import { Contract } from "ethers";
 import { deployments, network, ethers, web3 } from "hardhat";
 import { developmentChains } from "../../helper-hardhat-config";
@@ -14,7 +14,7 @@ skipDescribeIf(!developmentChains.includes(network.name))(
       await deployments.fixture(["mocks", "feed"]);
       const PriceConsumerV3 = await deployments.get("PriceConsumerV3");
       priceConsumerV3 = await ethers.getContractAt(
-        "PriceConsumerV3",
+        PriceConsumerV3.abi,
         PriceConsumerV3.address
       );
     });

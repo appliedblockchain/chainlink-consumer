@@ -15,7 +15,7 @@ skipDescribeIf(developmentChains.includes(network.name))(
         "RandomNumberConsumer"
       );
       randomNumberConsumer = await ethers.getContractAt(
-        "RandomNumberConsumer",
+        RandomNumberConsumer.abi,
         RandomNumberConsumer.address
       );
     });
