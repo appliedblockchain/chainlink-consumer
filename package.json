@@ -22,7 +22,11 @@
     "lint:fix": "wsrun -x @chainlink-consumer/eslint-config lint:fix",
     "test": "wsrun -x @chainlink-consumer/eslint-config test"
   },
-  "lint-staged": {},
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx}": [
+      "yarn lint:fix"
+    ]
+  },
   "devDependencies": {
     "husky": "^7.0.1",
     "lint-staged": "^11.1.1",
