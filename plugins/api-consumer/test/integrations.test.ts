@@ -5,7 +5,7 @@ import APIConsumerBytecode from "@chainlink-consumer/contracts/bytecode/APIConsu
 import LinkTokenBytecode from "@chainlink-consumer/contracts/bytecode/LinkToken.json";
 import MockOracleBytecode from "@chainlink-consumer/contracts/bytecode/MockOracle.json";
 import { Contract } from "@ethersproject/contracts";
-import { assert, expect } from "chai";
+import { expect, assert } from "chai";
 
 import { useEnvironment } from "./helpers";
 
@@ -14,7 +14,7 @@ const FEE = "100000000000000000";
 const FUND_AMOUNT = "1000000000000000000";
 
 describe("Integration", function () {
-  describe("random-number", function () {
+  describe("api-consumer", function () {
     useEnvironment();
     let apiConsumerContract: Contract;
 

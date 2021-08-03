@@ -1,6 +1,10 @@
+import chaiAsPromised from "chai-as-promised";
 import { resetHardhatContext } from "hardhat/plugins-testing";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import path from "path";
+import chai from "chai";
+
+chai.use(chaiAsPromised);
 
 declare module "mocha" {
   interface Context {
@@ -8,14 +12,14 @@ declare module "mocha" {
   }
 }
 
-export function useEnvironment() {
-  beforeEach("Loading hardhat environment", function () {
+export function useEnvironment(): void {
+  beforeEach(async function () {
     process.chdir(path.join(__dirname, "fixture"));
 
-    this.hre = require("hardhat");
+    this.hre = await import("hardhat");
   });
 
-  afterEach("Resetting hardhat", function () {
+  afterEach(function () {
     resetHardhatContext();
   });
 }

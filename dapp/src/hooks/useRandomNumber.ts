@@ -4,12 +4,15 @@ import { useCallback, useEffect, useState } from "react";
 import getRandomNumberConsumer from "../lib/getRandomNumberConsumerContract";
 
 interface RandomNumberHookState {
-  randomResult: string
-  randomResultCallError: string
-  getRandomNumber: () => Promise<void>
+  randomResult: string;
+  randomResultCallError: string;
+  getRandomNumber: () => Promise<void>;
 }
 
-const useRandomNumber = (provider: ethers.providers.Web3Provider | undefined, address: string): RandomNumberHookState => {
+const useRandomNumber = (
+  provider: ethers.providers.Web3Provider | undefined,
+  address: string
+): RandomNumberHookState => {
   const [randomResult, setRandomResult] = useState("");
   const [randomResultCallError, setRandomResultCallError] = useState("");
 

@@ -11,12 +11,9 @@ import { BlockchainContext } from "../providers/BlockchainProvider";
 
 const VRF: FunctionComponent = () => {
   const [address, setAddress] = useState("");
-  const { provider } = useContext(BlockchainContext)
-  const {
-    randomResult,
-    randomResultCallError,
-    getRandomNumber,
-  } = useRandomNumber(provider, address);
+  const { provider } = useContext(BlockchainContext);
+  const { randomResult, randomResultCallError, getRandomNumber } =
+    useRandomNumber(provider, address);
   const {
     requestNewRandomNumber,
     requestRandomNumberCallError,

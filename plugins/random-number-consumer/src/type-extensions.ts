@@ -12,6 +12,6 @@ declare module "hardhat/types/runtime" {
     requestRandomNumber: (
       hre: HardhatRuntimeEnvironment,
       contractAddress: string
-    ) => Promise<void>;
+    ) => Promise<string>;
   }
 }

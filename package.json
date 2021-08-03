@@ -1,14 +1,31 @@
 {
   "private": "true",
-  "workspaces": [
-    "plugins/price-consumer",
-    "plugins/random-number-consumer",
-    "plugins/api-consumer",
-    "contracts",
-    "plugins-consumer",
-    "dapp"
-  ],
+  "workspaces": {
+    "packages": [
+      "plugins/price-consumer",
+      "plugins/random-number-consumer",
+      "plugins/api-consumer",
+      "contracts",
+      "plugins-consumer",
+      "dapp",
+      "eslint-config"
+    ],
+    "nohoist": [
+      "**/@types/mocha",
+      "**/@types/jest",
+      "**/@testing-library/jest-dom",
+      "**/@types/testing-library__jest-dom"
+    ]
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "lint:fix": "wsrun -x @chainlink-consumer/eslint-config lint:fix"
+  },
+  "lint-staged": {},
   "devDependencies": {
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
     "wsrun": "^5.2.4"
-  }
+  },
+  "dependencies": {}
 }

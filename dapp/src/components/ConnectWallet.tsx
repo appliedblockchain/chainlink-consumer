@@ -8,11 +8,17 @@ interface Props {
   connectWallet: () => Promise<void>;
   networkError: string | undefined;
   dismiss: () => void;
-  metamaskInstalled: boolean
-  installMetamask: () => void
+  metamaskInstalled: boolean;
+  installMetamask: () => void;
 }
 
-const ConnectWallet: FunctionComponent<Props> = ({ connectWallet, networkError, dismiss, metamaskInstalled, installMetamask }) => {
+const ConnectWallet: FunctionComponent<Props> = ({
+  connectWallet,
+  networkError,
+  dismiss,
+  metamaskInstalled,
+  installMetamask,
+}) => {
   return (
     <div className="container">
       <div className="row justify-content-md-center">
@@ -22,28 +28,22 @@ const ConnectWallet: FunctionComponent<Props> = ({ connectWallet, networkError, 
           )}
         </div>
         <div className="col-6 p-4 text-center">
-          {
-            metamaskInstalled ?
-              <>
-                <p>Please connect to your wallet.</p>
-                <Button
-                  variant="dark"
-                  onClick={connectWallet}
-                >
-                  Connect Wallet
-                </Button>
-              </> :
-              <Button
-                variant="dark"
-                onClick={installMetamask}
-              >
-                Install Metamask
+          {metamaskInstalled ? (
+            <>
+              <p>Please connect to your wallet.</p>
+              <Button variant="dark" onClick={connectWallet}>
+                Connect Wallet
               </Button>
-          }
+            </>
+          ) : (
+            <Button variant="dark" onClick={installMetamask}>
+              Install Metamask
+            </Button>
+          )}
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default ConnectWallet
+export default ConnectWallet;

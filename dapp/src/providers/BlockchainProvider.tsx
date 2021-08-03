@@ -3,7 +3,6 @@ import React, { createContext, FunctionComponent } from "react";
 
 import useConnectWallet from "../hooks/useConnectWallet";
 
-
 interface ContextFields {
   isConnectingWallet: boolean;
   selectedAddress: string;
@@ -14,10 +13,12 @@ interface ContextFields {
   installMetamask: () => void;
   chainID: string;
   metamaskInstalled: boolean;
-  provider?: ethers.providers.Web3Provider
+  provider?: ethers.providers.Web3Provider;
 }
 
-const FunctionNotInitialized = () => { throw new Error("function not initialized") }
+const FunctionNotInitialized = () => {
+  throw new Error("function not initialized");
+};
 
 export const BlockchainContext = createContext<ContextFields>({
   isConnectingWallet: false,
@@ -29,7 +30,7 @@ export const BlockchainContext = createContext<ContextFields>({
   installMetamask: FunctionNotInitialized,
   chainID: "",
   metamaskInstalled: false,
-  provider: undefined
+  provider: undefined,
 });
 
 const BlockchainProvider: FunctionComponent = ({ children }) => {

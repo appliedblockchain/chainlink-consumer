@@ -5,7 +5,7 @@
   "scripts": {
     "test": "exit",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint:fix": "eslint . --ext .js --ext .ts  --fix",
     "prepublishOnly": "hardhat compile && rm -rf artifacts && rm -rf cache"
   },
   "license": "MIT",
@@ -22,9 +22,9 @@
     "web3": "^1.2.9"
   },
   "dependencies": {
+    "@chainlink-consumer/plugins-api-consumer": "0.0.1",
     "@chainlink-consumer/plugins-price-consumer": "0.0.1",
     "@chainlink-consumer/plugins-random-number-consumer": "0.0.1",
-    "@chainlink-consumer/plugins-api-consumer": "0.0.1",
     "@chainlink/contracts": "^0.1.9",
     "@chainlink/test-helpers": "0.0.5",
     "@chainlink/token": "^1.1.0",
@@ -33,10 +33,6 @@
     "babel-eslint": "^10.1.0",
     "dotenv": "^8.2.0",
     "eslint": "^7.22.0",
-    "mocha-skip-if": "^0.0.3",
     "transform": "^1.1.2"
-  },
-  "mocha": {
-    "timeout": 10000000
   }
 }

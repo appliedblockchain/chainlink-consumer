@@ -3,16 +3,16 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import MetaMaskOnboarding from "@metamask/onboarding";
 
 interface ConnectWalletHookState {
-  isConnectingWallet: boolean
-  selectedAddress: string
-  networkError: string
-  connectWallet: () => Promise<void>
-  disconnectWallet: () => Promise<void>
-  dismissNetworkError: () => void
-  installMetamask: () => void
-  chainID: string
-  metamaskInstalled: boolean
-  provider?: ethers.providers.Web3Provider
+  isConnectingWallet: boolean;
+  selectedAddress: string;
+  networkError: string;
+  connectWallet: () => Promise<void>;
+  disconnectWallet: () => Promise<void>;
+  dismissNetworkError: () => void;
+  installMetamask: () => void;
+  chainID: string;
+  metamaskInstalled: boolean;
+  provider?: ethers.providers.Web3Provider;
 }
 
 const useConnectWallet = (): ConnectWalletHookState => {
@@ -21,7 +21,7 @@ const useConnectWallet = (): ConnectWalletHookState => {
   const [networkError, setNetworkError] = useState("");
   const [chainID, setChainID] = useState("");
   const onboarding = useRef<MetaMaskOnboarding>();
-  const [provider, setProvider] = useState<ethers.providers.Web3Provider>()
+  const [provider, setProvider] = useState<ethers.providers.Web3Provider>();
 
   useEffect(() => {
     if (!onboarding.current) {
@@ -29,15 +29,15 @@ const useConnectWallet = (): ConnectWalletHookState => {
     }
 
     if (MetaMaskOnboarding.isMetaMaskInstalled()) {
-      onboarding.current.stopOnboarding()
-      setProvider(new ethers.providers.Web3Provider(window.ethereum))
+      onboarding.current.stopOnboarding();
+      setProvider(new ethers.providers.Web3Provider(window.ethereum));
     }
   }, []);
 
   async function connectWallet() {
     try {
       if (!window.ethereum.request) {
-        return
+        return;
       }
 
       setConnectingWallet(true);
@@ -50,14 +50,14 @@ const useConnectWallet = (): ConnectWalletHookState => {
 
       setConnectingWallet(false);
     } catch (err) {
-      setConnectingWallet(false)
+      setConnectingWallet(false);
     }
   }
 
   const checkNetwork = useCallback(async function () {
     try {
       if (!window.ethereum.request) {
-        return
+        return;
       }
 
       const newChainID = await window.ethereum.request({
@@ -81,7 +81,7 @@ const useConnectWallet = (): ConnectWalletHookState => {
 
   useEffect(() => {
     if (!provider) {
-      return
+      return;
     }
 
     // We reinitialize it whenever the user changes their account.
@@ -108,11 +108,11 @@ const useConnectWallet = (): ConnectWalletHookState => {
 
     connectWallet();
     checkNetwork();
-  }, [provider, checkNetwork])
+  }, [provider, checkNetwork]);
 
   const installMetamask = () => {
-    onboarding.current?.startOnboarding()
-  }
+    onboarding.current?.startOnboarding();
+  };
 
   return {
     isConnectingWallet,
@@ -124,7 +124,7 @@ const useConnectWallet = (): ConnectWalletHookState => {
     installMetamask,
     chainID,
     metamaskInstalled: MetaMaskOnboarding.isMetaMaskInstalled(),
-    provider
+    provider,
   };
 };
 

@@ -20,9 +20,8 @@ const App: FunctionComponent = () => {
     networkError,
     dismissNetworkError,
     metamaskInstalled,
-    installMetamask
+    installMetamask,
   } = useContext(BlockchainContext);
-
 
   if (isConnectingWallet) {
     return <Loading />;
@@ -68,6 +67,6 @@ const App: FunctionComponent = () => {
       </div>
     </Router>
   );
-}
+};
 
 export default App;

@@ -1,11 +1,7 @@
 {
   "root": true,
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
   "extends": [
-    "eslint:recommended",
-    "prettier",
-    "plugin:@typescript-eslint/recommended",
+    "@chainlink-consumer/eslint-config",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jest/recommended"

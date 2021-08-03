@@ -12,7 +12,12 @@ interface Props {
   refresh?: () => Promise<void>;
 }
 
-const DisplayAsyncValue: FunctionComponent<Props> = ({ label, value, error, refresh }) => {
+const DisplayAsyncValue: FunctionComponent<Props> = ({
+  label,
+  value,
+  error,
+  refresh,
+}) => {
   const [refreshPending, setRefreshPending] = useState(false);
   const onRefresh = useCallback(async () => {
     if (!refresh) {

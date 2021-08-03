@@ -26,11 +26,10 @@ const Loading: FunctionComponent = () => {
           textAlign: "center",
         }}
       >
-        <div className="spinner-border" role="status">
-        </div>
+        <div className="spinner-border" role="status"></div>
       </div>
     </div>
   );
-}
+};
 
-export default Loading
+export default Loading;

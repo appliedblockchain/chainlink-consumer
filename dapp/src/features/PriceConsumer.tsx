@@ -9,12 +9,9 @@ import { BlockchainContext } from "../providers/BlockchainProvider";
 
 const PriceConsumer: FunctionComponent = () => {
   const [address, setAddress] = useState("");
-  const { provider } = useContext(BlockchainContext)
-  const {
-    latestPrice,
-    latestPriceCallError,
-    getLatestPrice,
-  } = usePriceConsumer(provider, address);
+  const { provider } = useContext(BlockchainContext);
+  const { latestPrice, latestPriceCallError, getLatestPrice } =
+    usePriceConsumer(provider, address);
 
   return (
     <div>

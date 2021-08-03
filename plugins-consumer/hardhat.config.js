@@ -61,8 +61,5 @@ module.exports = {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
     apiKey: ETHERSCAN_API_KEY,
-  },
-  mocha: {
-    timeout: 100000,
-  },
+  }
 };

@@ -5,7 +5,10 @@ interface Props {
   dismiss: () => void;
 }
 
-const NetworkErrorMessage: FunctionComponent<Props> = ({ message, dismiss }) => {
+const NetworkErrorMessage: FunctionComponent<Props> = ({
+  message,
+  dismiss,
+}) => {
   return (
     <div className="alert alert-danger" role="alert">
       {message}
@@ -20,6 +23,6 @@ const NetworkErrorMessage: FunctionComponent<Props> = ({ message, dismiss }) => 
       </button>
     </div>
   );
-}
+};
 
-export default NetworkErrorMessage
+export default NetworkErrorMessage;

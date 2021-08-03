@@ -1,11 +1,7 @@
+import { Contract } from "ethers";
 import RandomNumberConsumerABI from "@chainlink-consumer/contracts/abi/RandomNumberConsumer.json";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
-import { HardhatRuntimeEnvironment } from "hardhat/types";
 
-export default (
-  ethers: HardhatRuntimeEnvironment["ethers"],
-  contractAddr: string,
-  signer: SignerWithAddress
-) => {
-  return new ethers.Contract(contractAddr, RandomNumberConsumerABI, signer);
+export default (contractAddr: string, signer: SignerWithAddress): Contract => {
+  return new Contract(contractAddr, RandomNumberConsumerABI, signer);
 };

@@ -11,8 +11,11 @@ import { BlockchainContext } from "../providers/BlockchainProvider";
 
 const APIConsumer: FunctionComponent = () => {
   const [address, setAddress] = useState("");
-  const { provider } = useContext(BlockchainContext)
-  const { volume, volumeCallError, getVolume } = useAPIConsumer(provider, address);
+  const { provider } = useContext(BlockchainContext);
+  const { volume, volumeCallError, getVolume } = useAPIConsumer(
+    provider,
+    address
+  );
   const {
     requestDataCallError,
     requestDataTxHash,
