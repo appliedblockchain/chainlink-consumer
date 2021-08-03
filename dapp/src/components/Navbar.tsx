@@ -9,7 +9,7 @@ interface Props {
 const CustomNavbar: FunctionComponent<Props> = ({ address }) => (
   <Navbar bg="dark" variant="dark">
     <Container>
-      <Navbar.Brand href="/">Brand link</Navbar.Brand>
+      <Navbar.Brand href="/">Chainlink Consumer</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
