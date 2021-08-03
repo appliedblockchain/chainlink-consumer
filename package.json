@@ -19,7 +19,8 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "lint:fix": "wsrun -x @chainlink-consumer/eslint-config lint:fix"
+    "lint:fix": "wsrun -x @chainlink-consumer/eslint-config lint:fix",
+    "test": "wsrun -x @chainlink-consumer/eslint-config test"
   },
   "lint-staged": {},
   "devDependencies": {
