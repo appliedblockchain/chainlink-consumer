@@ -1,3 +1,4 @@
+import { TransactionResponse } from "@ethersproject/providers";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
 import getRandomNumberConsumerContract from "./get-random-number-consumer-contract";
@@ -5,7 +6,7 @@ import getRandomNumberConsumerContract from "./get-random-number-consumer-contra
 export default async (
   hre: HardhatRuntimeEnvironment,
   contractAddr: string
-): Promise<string> => {
+): Promise<TransactionResponse> => {
   const accounts = await hre.ethers.getSigners();
   const signer = accounts[0];
   const vrfConsumerContract = getRandomNumberConsumerContract(
@@ -13,7 +14,7 @@ export default async (
     signer
   );
   const result = await vrfConsumerContract.getRandomNumber();
-  await result.wait();
+  const receipt = await result.wait();
 
-  return result;
+  return receipt;
 };

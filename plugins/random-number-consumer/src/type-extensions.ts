@@ -1,6 +1,4 @@
-// If your plugin extends types from another plugin, you should import the plugin here.
-
-// To extend one of Hardhat's types, you need to import the module where it has been defined, and redeclare it.
+import { TransactionResponse } from "@ethersproject/providers";
 import "hardhat/types/config";
 import "hardhat/types/runtime";
 declare module "hardhat/types/runtime" {
@@ -12,6 +10,6 @@ declare module "hardhat/types/runtime" {
     requestRandomNumber: (
       hre: HardhatRuntimeEnvironment,
       contractAddress: string
-    ) => Promise<string>;
+    ) => Promise<TransactionResponse>;
   }
 }

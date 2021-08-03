@@ -1,3 +1,5 @@
+import { task } from "hardhat/config";
+
 task(
   "read-data",
   "Calls an API Consumer Contract to read data obtained from an external API"
@@ -7,7 +9,7 @@ task(
     "The address of the API Consumer contract that you want to call"
   )
   .setAction(async ({ contract }, hre) => {
-    const networkId = network.name;
+    const networkId = hre.network.name;
     console.log(
       "Reading data from API Consumer contract ",
       contract,
@@ -19,18 +21,16 @@ task(
 
     console.log("Data is: ", result);
     if (
-      result == 0 &&
-      ["hardhat", "localhost", "ganache"].indexOf(network.name) == 0
+      result === "0" &&
+      ["hardhat", "localhost", "ganache"].indexOf(hre.network.name) == 0
     ) {
       console.log(
         "You'll either need to wait another minute, or fix something!"
       );
     }
-    if (["hardhat", "localhost", "ganache"].indexOf(network.name) >= 0) {
+    if (["hardhat", "localhost", "ganache"].indexOf(hre.network.name) >= 0) {
       console.log(
         "You'll have to manually update the value since you're on a local chain!"
       );
     }
   });
-
-module.exports = {};

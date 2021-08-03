@@ -1,41 +1,35 @@
-# chainlink-api-consumer
+# Chainlink Consumer API Consumer
 
-_A one line description of the plugin_
-
-[Hardhat](https://hardhat.org) plugin example.
+A Hardhat plugin that interacts with Chainlink API Consumer contract.
 
 ## What
 
-<_A longer, one paragraph, description of the plugin_>
-
-This plugin will help you with world domination by implementing a simple tic-tac-toe in the terminal.
+This plugin will help you with reading data from a Chainlink API Consumer and request the contract to update the data.
 
 ## Installation
 
-<_A step-by-step guide on how to install the plugin_>
+To install this plugin use:
 
 ```bash
-npm install <your npm package name> [list of peer dependencies]
+npm install @chainlink-consumer/plugins-api-consumer @nomiclabs/hardhat-ethers --save
 ```
 
 Import the plugin in your `hardhat.config.js`:
 
 ```js
-require("<your plugin npm package name>");
+require("@chainlink-consumer/plugins-api-consumer");
 ```
 
 Or if you are using TypeScript, in your `hardhat.config.ts`:
 
 ```ts
-import "<your plugin npm package name>";
+import "@chainlink-consumer/plugins-api-consumer";
 ```
 
 
 ## Required plugins
 
-<_The list of all the required Hardhat plugins if there are any_>
-
-- [@nomiclabs/hardhat-web3](https://github.com/nomiclabs/hardhat/tree/master/packages/hardhat-web3)
+- [@nomiclabs/hardhat-ethers](https://github.com/nomiclabs/hardhat/tree/master/packages/hardhat-ethers)
 
 ## Tasks
 

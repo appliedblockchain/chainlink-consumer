@@ -6,8 +6,8 @@
 </p>
 <br/>
 
-# Chainlink Hardhat Box
- Implementation of the following 3 Chainlink features using the [Hardhat](https://hardhat.org/) development environment:
+# Chainlink Consumer Contracts
+ Contains the smart contracts, ABIs, Bytecodes, types, and deployment/interaction tools to support the following 3 Chainlink features using the [Hardhat](https://hardhat.org/) development environment:
  - [Request & Receive data](https://docs.chain.link/docs/request-and-receive-data)
  - [Chainlink Price Feeds](https://docs.chain.link/docs/using-chainlink-reference-contracts)
  - [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf)
@@ -97,67 +97,15 @@ npx hardhat deploy --network kovan
 ## Test
 Tests are located in the [test](https://github.com/smartcontractkit/hardhat-starter-kit/tree/main/test) directory, and are split between unit tests and integration tests. Unit tests should only be run on local environments, and integration tests should only run on live environments.
 
-To run unit tests:
+To run tests:
 
 ```bash
 yarn test
 ```
 
-To run integration tests:
-
-```bash
-yarn test-integration
-```
-
 ## Run
 
 The deployment output will give you the contract addresses as they are deployed. You can then use these contract addresses in conjunction with Hardhat tasks to perform operations on each contract
-
-
-### Chainlink Price Feeds
-The Price Feeds consumer contract has one task, to read the latest price of a specified price feed contract
-
-```bash
-npx hardhat read-price-feed --contract insert-contract-address-here --network network
-```
-
-### Request & Receive Data
-The APIConsumer contract has two tasks, one to request external data based on a set of parameters, and one to check to see what the result of the data request is. This contract needs to be funded with link first:
-
-```bash
-npx hardhat fund-link --contract insert-contract-address-here --network network
-```
-
-Once it's funded, you can request external data by passing in a number of parameters to the request-data task. The contract parameter is mandatory, the rest are optional
-
-```bash
-npx hardhat request-data --contract insert-contract-address-here --network network
-```
-
-Once you have successfully made a request for external data, you can see the result via the read-data task
-```bash
-npx hardhat read-data --contract insert-contract-address-here --network network
-```
-
-
-### VRF Get a random number
-The VRFConsumer contract has two tasks, one to request a random number, and one to read the result of the random number request. This contract needs to be funded with link first:
-
-```bash
-npx hardhat fund-link --contract insert-contract-address-here --network network
-```
-
-Once it's funded, you can perform a VRF request with the request-random-number task:
-
-```bash
-npx hardhat request-random-number --contract insert-contract-address-here --network network
-```
-
-Once you have successfully made a request for a random number, you can see the result via the read-random-number task:
-
-```bash
-npx hardhat read-random-number --contract insert-contract-address-here --network network
-```
 
 ## Verify on Etherscan
 

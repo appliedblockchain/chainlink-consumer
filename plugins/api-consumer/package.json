@@ -16,8 +16,8 @@
   "scripts": {
     "lint:fix": "eslint . --ext .js --ext .ts --fix",
     "lint": "eslint . --ext .js --ext .ts",
-    "test": "mocha --exit --recursive 'test/**/*.test.ts'",
-    "test:watch": "mocha --exit --recursive -w 'test/**/*.test.ts'",
+    "test": "mocha --exit --recursive './test/**/*.test.ts'",
+    "test:watch": "mocha --exit --recursive -w './test/**/*.test.ts'",
     "build": "tsc",
     "watch": "tsc -w"
   },
@@ -29,6 +29,7 @@
   ],
   "dependencies": {
     "@chainlink-consumer/contracts": "0.0.1",
+    "@ethersproject/providers": "^5.4.3",
     "@nomiclabs/buidler": "^1.4.8",
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "hardhat": "^2.0.0"

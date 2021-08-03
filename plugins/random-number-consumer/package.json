@@ -51,5 +51,7 @@
   "peerDependencies": {
     "hardhat": "^2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@ethersproject/providers": "^5.4.3"
+  }
 }

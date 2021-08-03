@@ -25,10 +25,9 @@ const useAPIConsumerRequestData = (
     try {
       setRequestPending(true);
       setRequestDataCallError("");
-      const tx = await getAPIConsumerContract(
-        provider,
-        address
-      ).requestVolumeData();
+      const apiConsumer = getAPIConsumerContract(provider, address);
+
+      const tx = await apiConsumer.requestVolumeData();
       await tx.wait();
       setRequestDataTxHash(tx.hash);
       setRequestPending(false);

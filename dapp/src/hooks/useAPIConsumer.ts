@@ -17,7 +17,9 @@ const useAPIConsumer = (
   const [volumeCallError, setVolumeCallError] = useState("");
 
   const getVolume = useCallback(() => {
-    return getAPIConsumerContract(provider, address)
+    const apiConsumer = getAPIConsumerContract(provider, address);
+
+    return apiConsumer
       .volume()
       .then((res: ethers.BigNumber) => res.toString())
       .then(setVolume)

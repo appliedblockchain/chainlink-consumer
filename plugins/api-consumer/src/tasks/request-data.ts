@@ -1,3 +1,5 @@
+import { task } from "hardhat/config";
+
 task("request-data", "Calls an API Consumer Contract to request external data")
   .addParam(
     "contract",
@@ -8,7 +10,7 @@ task("request-data", "Calls an API Consumer Contract to request external data")
       "Calling API Consumer contract ",
       contract,
       " on network ",
-      network.name
+      hre.network.name
     );
 
     const result = await hre.requestData(hre, contract);
@@ -24,7 +26,6 @@ task("request-data", "Calls an API Consumer Contract to request external data")
       "npx hardhat read-data --contract " +
         contract +
         " --network " +
-        network.name
+        hre.network.name
     );
   });
-module.exports = {};
