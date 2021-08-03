@@ -1,6 +1,6 @@
 # Chainlink Consumer Dapp
 
-Example of Dapp that interacts with the following 3 Chainlink features:
+Example of Dapp that interacts with the contracts of the following 3 Chainlink features:
  - [Request & Receive data](https://docs.chain.link/docs/request-and-receive-data)
  - [Chainlink Price Feeds](https://docs.chain.link/docs/using-chainlink-reference-contracts)
  - [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf)

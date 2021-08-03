@@ -1,60 +1,70 @@
-# Hardhat TypeScript plugin boilerplate
+# Chainlink Consumer Random Number Consumer
 
-This is a sample Hardhat plugin written in TypeScript. Creating a Hardhat plugin
-can be as easy as extracting a part of your config into a different file and
-publishing it to npm.
+A Hardhat plugin that interacts with the Chainlink Random Number Consumer contract.
 
-This sample project contains an example on how to do that, but also comes with
-many more features:
+## What
 
-- A mocha test suite ready to use
-- TravisCI already setup
-- A package.json with scripts and publishing info
-- Examples on how to do different things
+This plugin will help you read data from a Chainlink Random Number Consumer and call functions to update the data.
 
 ## Installation
 
-To start working on your project, just run
+To install this plugin use:
 
 ```bash
-npm install
+npm install @chainlink-consumer/plugins-random-number-consumer @nomiclabs/hardhat-ethers --save
 ```
 
-## Plugin development
+Import the plugin in your `hardhat.config.js`:
 
-Make sure to read our [Plugin Development Guide](https://hardhat.org/guides/create-plugin.html)
-to learn how to build a plugin, and our
-[best practices to create high-quality plugins](https://hardhat.org/advanced/building-plugins.html).
+```js
+require("@chainlink-consumer/plugins-random-number-consumer");
+```
 
-## Testing
+Or if you are using TypeScript, in your `hardhat.config.ts`:
 
-Running `npm run test` will run every test located in the `test/` folder. They
-use [mocha](https://mochajs.org) and [chai](https://www.chaijs.com/),
-but you can customize them.
+```ts
+import "@chainlink-consumer/plugins-random-number-consumer";
+```
 
-We recommend creating unit tests for your own modules, and integration tests for
-the interaction of the plugin with Hardhat and its dependencies.
 
-## Linting and autoformat
+## Required plugins
 
-All of Hardhat projects use [prettier](https://prettier.io/) and
-[tslint](https://palantir.github.io/tslint/).
+- [@nomiclabs/hardhat-ethers](https://github.com/nomiclabs/hardhat/tree/master/packages/hardhat-ethers)
 
-You can check if your code style is correct by running `npm run lint`, and fix
-it with `npm run lint:fix`.
+## Tasks
 
-## Building the project
+This plugin adds two tasks to interact with a Random Number Consumer contract.
 
-Just run `npm run build` ️👷
+Read the contract random number.
+```
+npx hardhat read-random-number --contract <contract address>
+```
 
-## README file
+Request the random number to be updated. It may take some minutes until a Chainlink node updates the data.
+```
+npx hardhat request-random-number --contract <contract address>
+```
 
-This README describes this boilerplate project, but won't be very useful to your
-plugin users.
+## Environment extensions
 
-Take a look at `README-TEMPLATE.md` for an example of what a Hardhat plugin's
-README should look like.
+This plugin adds the functions `readRandomNumber` and `requestRandomNumber` to the Hardhat Runtime Environment.
 
-## Migrating from Buidler?
+Read the contract data.
+```
+hre.readRandomNumber(hre,contractAddress);
+```
 
-Take a look at [the migration guide](MIGRATION.md)!
+Request the random number to be updated. It may take some minutes until a Chainlink node updates the data.
+```
+hre.requestRandomNumber(hre,contractAddress);
+```
+
+## Configuration
+
+This plugin does not require configuration.
+
+## Usage
+
+There are no additional steps you need to take for this plugin to work.
+
+Install it and access the provided functions and the provided tasks through the Hardhat Runtime Environment anywhere you need it.

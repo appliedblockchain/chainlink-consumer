@@ -11,13 +11,13 @@ A monorepo with fully Chainlink working end to end scenarios. There are tools an
 
 | Package | Description |
 | --- | --- |
-| @chainlink-consumer/contracts |  Smart contracts consumers that interact with oracles and Chainlink coordinators. It also provides scripts to deploy and test locally the smart contracts. |
+| @chainlink-consumer/contracts |  Smart contracts consumers source code that interact with oracles and Chainlink coordinators.  |
 | @chainlink-consumer/dapp | Example of frontend application that read and update data of Chainlink smart contracts. |
 | @chainlink-consumer/eslint-config | Shareable eslint configuration used in every package of this monorepo. |
 | @chainlink-consumer/plugins-api-consumer | Plugin that extends Hardhat environment with utilities to interact with the API Consumer contract. |
 | @chainlink-consumer/plugins-price-consumer | Plugin that extends Hardhat environment with utilities to interact with the Price Consumer contract. |
 | @chainlink-consumer/plugins-random-number-consumer | Plugin that extends Hardhat environment with utilities to interact with the Verifiable Random Function Consumer contract. |
-| @chainlink-consumer/plugins-consumer | Example of Hardhat application that uses the plugins of this monorepo to setup Hardhat tasks. |
+| @chainlink-consumer/devops | Hardhat application that provides scripts to deploy and test the contracts. The plugins of this monorepo are setup in this package. |
 
 ## Development Setup
 
