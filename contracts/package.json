@@ -1,13 +1,13 @@
 {
   "name": "@appliedblockchain/chainlink-contracts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "scripts": {
     "test": "hardhat test",
     "lint": "eslint . --ext .js --ext .ts ",
     "lint:fix": "eslint . --ext .js --ext .ts  --fix",
     "compile": "hardhat compile",
-    "prepublishOnly": "npm run compile && rm -rf artifacts && rm -rf cache",
+    "prepare": "npm run compile && rm -rf artifacts && rm -rf cache",
     "build": "tsc"
   },
   "license": "MIT",

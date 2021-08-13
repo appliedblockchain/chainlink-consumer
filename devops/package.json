@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@appliedblockchain/chainlink-contracts": "0.0.1",
+    "@appliedblockchain/chainlink-contracts": "0.0.2",
     "@appliedblockchain/chainlink-eslint-config": "0.0.1",
     "@appliedblockchain/chainlink-plugins-api-consumer": "0.0.1",
     "@appliedblockchain/chainlink-plugins-price-consumer": "0.0.1",

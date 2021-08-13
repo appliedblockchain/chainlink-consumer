@@ -29,7 +29,7 @@
     "README.md"
   ],
   "devDependencies": {
-    "@appliedblockchain/chainlink-contracts": "0.0.1",
+    "@appliedblockchain/chainlink-contracts": "0.0.2",
     "@appliedblockchain/chainlink-eslint-config": "0.0.1",
     "@ethersproject/contracts": "^5.4.0",
     "@nomiclabs/buidler": "^1.4.8",

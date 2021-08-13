@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@appliedblockchain/chainlink-contracts": "0.0.1",
+    "@appliedblockchain/chainlink-contracts": "0.0.2",
     "@metamask/onboarding": "^1.0.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

@@ -213,6 +213,38 @@
     ethers "~4.0.4"
     lodash "^4.17.11"
 
+"@appliedblockchain/chainlink-contracts@0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@appliedblockchain/chainlink-contracts/-/chainlink-contracts-0.0.1.tgz#bb3af035e55d19b32f30fab3f2d062158c1bedc4"
+  integrity sha512-o21wXLoWLgqJkg4YJKsoxwmcuAboGbQ6Dg8QoBfh8b+BKdF5zUuV9QTpIBH6OCu5/CGl/NQqbE21fUoBz6P2Ag==
+  dependencies:
+    "@chainlink/contracts" "^0.1.9"
+    "@chainlink/test-helpers" "0.0.5"
+    "@chainlink/token" "^1.1.0"
+
+"@appliedblockchain/chainlink-plugins-api-consumer@0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@appliedblockchain/chainlink-plugins-api-consumer/-/chainlink-plugins-api-consumer-0.0.1.tgz#df2a5341d0096a9d0a96d88fb158cfe79cb91669"
+  integrity sha512-46Tmtyerj3FFJN1tqvhav/1qRyhfuhc6MLnp6VIQTWdW4rAUysGi9SN8cY1O+sSo3segqysMfPqlzTHxBKDOfw==
+  dependencies:
+    "@appliedblockchain/chainlink-contracts" "0.0.1"
+    "@ethersproject/providers" "^5.4.3"
+    "@nomiclabs/buidler" "^1.4.8"
+    "@nomiclabs/hardhat-ethers" "^2.0.2"
+    hardhat "^2.0.0"
+
+"@appliedblockchain/chainlink-plugins-price-consumer@0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@appliedblockchain/chainlink-plugins-price-consumer/-/chainlink-plugins-price-consumer-0.0.1.tgz#11fc267a27a1b0a1450f380a8424339038e01410"
+  integrity sha512-/FcqpgtUMUSlJaA/MVMDXsDkBeXNPNwrTb8AD+vm4hmw3I/nx/7WNA1M/hOVus++9jx1Taa0NT2gkeSaHUIFiQ==
+
+"@appliedblockchain/chainlink-plugins-random-number-consumer@0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@appliedblockchain/chainlink-plugins-random-number-consumer/-/chainlink-plugins-random-number-consumer-0.0.1.tgz#b1ad961374268a806be0d77573715ec8ad8f6414"
+  integrity sha512-N7Q67junviG9LbkEG39+WrDO9Gjy2/4l2AW0wtRzsrNslLa5KRCCT0U3ntpLHa7f8Ukl/4yCHSmAbWlg1brvLQ==
+  dependencies:
+    "@ethersproject/providers" "^5.4.3"
+
 "@babel/code-frame@7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.10.4.tgz#168da1a36e90da68ae8d49c0f1b48c7c6249213a"
