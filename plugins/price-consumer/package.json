@@ -1,7 +1,7 @@
 {
   "name": "@appliedblockchain/chainlink-plugins-price-consumer",
-  "version": "0.0.1",
-  "description": "Hardhat TypeScript plugin boilerplate",
+  "version": "0.0.2",
+  "description": "Hardhat TypeScript plugin that interacts with chainlink price feed consumer contract.",
   "repository": "github:nomiclabs/hardhat-ts-plugin-boilerplate",
   "author": "Nomic Labs LLC",
   "license": "MIT",
