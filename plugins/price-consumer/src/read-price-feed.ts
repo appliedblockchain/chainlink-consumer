@@ -1,4 +1,4 @@
-import PriceConsumerV3 from "@chainlink-consumer/contracts/abi/PriceConsumerV3.json";
+import PriceConsumerV3 from "@appliedblockchain/chainlink-contracts/abi/PriceConsumerV3.json";
 import { BigNumber } from "ethers";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 

@@ -11,19 +11,19 @@ This plugin will help you read data from a Chainlink Random Number Consumer and 
 To install this plugin use:
 
 ```bash
-npm install @chainlink-consumer/plugins-random-number-consumer @nomiclabs/hardhat-ethers --save
+npm install @appliedblockchain/chainlink-plugins-random-number-consumer @nomiclabs/hardhat-ethers --save
 ```
 
 Import the plugin in your `hardhat.config.js`:
 
 ```js
-require("@chainlink-consumer/plugins-random-number-consumer");
+require("@appliedblockchain/chainlink-plugins-random-number-consumer");
 ```
 
 Or if you are using TypeScript, in your `hardhat.config.ts`:
 
 ```ts
-import "@chainlink-consumer/plugins-random-number-consumer";
+import "@appliedblockchain/chainlink-plugins-random-number-consumer";
 ```
 
 

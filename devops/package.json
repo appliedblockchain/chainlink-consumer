@@ -1,5 +1,5 @@
 {
-  "name": "@chainlink-consumer/devops",
+  "name": "@appliedblockchain/chainlink-devops",
   "version": "0.0.1",
   "description": "",
   "scripts": {
@@ -12,11 +12,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@chainlink-consumer/contracts": "0.0.1",
-    "@chainlink-consumer/eslint-config": "0.0.1",
-    "@chainlink-consumer/plugins-api-consumer": "0.0.1",
-    "@chainlink-consumer/plugins-price-consumer": "0.0.1",
-    "@chainlink-consumer/plugins-random-number-consumer": "0.0.1",
+    "@appliedblockchain/chainlink-contracts": "0.0.1",
+    "@appliedblockchain/chainlink-eslint-config": "0.0.1",
+    "@appliedblockchain/chainlink-plugins-api-consumer": "0.0.1",
+    "@appliedblockchain/chainlink-plugins-price-consumer": "0.0.1",
+    "@appliedblockchain/chainlink-plugins-random-number-consumer": "0.0.1",
     "@nomiclabs/hardhat-ethers": "^2.0.1",
     "@nomiclabs/hardhat-etherscan": "^2.1.1",
     "@nomiclabs/hardhat-waffle": "^2.0.1",

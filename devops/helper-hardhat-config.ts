@@ -1,7 +1,7 @@
 import { HardhatEthersHelpers } from "@nomiclabs/hardhat-ethers/types";
 import { ethers } from "ethers";
 import Web3 from "web3";
-import ERC667ABI from "@chainlink-consumer/contracts/abi/ERC677.json";
+import ERC667ABI from "@appliedblockchain/chainlink-contracts/abi/ERC677.json";
 
 interface NetworkConfig {
   name: string;

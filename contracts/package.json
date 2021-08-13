@@ -1,5 +1,5 @@
 {
-  "name": "@chainlink-consumer/contracts",
+  "name": "@appliedblockchain/chainlink-contracts",
   "version": "0.0.1",
   "description": "",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@chainlink-consumer/eslint-config": "0.0.1",
+    "@appliedblockchain/chainlink-eslint-config": "0.0.1",
     "@typechain/ethers-v5": "^7.0.1",
     "@typechain/hardhat": "^2.2.0",
     "@types/mocha": "^9.0.0",

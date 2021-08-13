@@ -1,7 +1,7 @@
-import MockV3AggregatorABI from "@chainlink-consumer/contracts/abi/MockV3Aggregator.json";
-import PriceConsumerV3ABI from "@chainlink-consumer/contracts/abi/PriceConsumerV3.json";
-import MockV3AggregatorBytecode from "@chainlink-consumer/contracts/bytecode/MockV3Aggregator.json";
-import PriceConsumerV3Bytecode from "@chainlink-consumer/contracts/bytecode/PriceConsumerV3.json";
+import MockV3AggregatorABI from "@appliedblockchain/chainlink-contracts/abi/MockV3Aggregator.json";
+import PriceConsumerV3ABI from "@appliedblockchain/chainlink-contracts/abi/PriceConsumerV3.json";
+import MockV3AggregatorBytecode from "@appliedblockchain/chainlink-contracts/bytecode/MockV3Aggregator.json";
+import PriceConsumerV3Bytecode from "@appliedblockchain/chainlink-contracts/bytecode/PriceConsumerV3.json";
 import { assert, expect } from "chai";
 
 import { useEnvironment } from "./helpers";

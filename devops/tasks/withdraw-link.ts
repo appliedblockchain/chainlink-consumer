@@ -1,7 +1,7 @@
 import { task } from "hardhat/config";
 import { getNetworkFromName } from "../helper-hardhat-config";
-import ERC677ABI from "@chainlink-consumer/contracts/abi/ERC677.json";
-import RandomNumberConsumerABI from "@chainlink-consumer/contracts/abi/RandomNumberConsumer.json";
+import ERC677ABI from "@appliedblockchain/chainlink-contracts/abi/ERC677.json";
+import RandomNumberConsumerABI from "@appliedblockchain/chainlink-contracts/abi/RandomNumberConsumer.json";
 
 task("withdraw-link", "Returns any LINK left in deployed contract")
   .addParam("contract", "The address of the contract")

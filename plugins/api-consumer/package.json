@@ -1,8 +1,11 @@
 {
-  "name": "@chainlink-consumer/plugins-api-consumer",
+  "name": "@appliedblockchain/chainlink-plugins-api-consumer",
   "version": "0.0.1",
   "description": "Hardhat TypeScript plugin boilerplate",
-  "repository": "github:nomiclabs/hardhat-ts-plugin-boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomiclabs/hardhat-ts-plugin-boilerplate.git"
+  },
   "author": "Nomic Labs LLC",
   "license": "MIT",
   "main": "dist/src/index.js",
@@ -19,7 +22,8 @@
     "test": "mocha --exit --recursive './test/**/*.test.ts'",
     "test:watch": "mocha --exit --recursive -w './test/**/*.test.ts'",
     "build": "tsc",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "prepublish": "npm run build"
   },
   "files": [
     "dist/src/",
@@ -28,14 +32,14 @@
     "README.md"
   ],
   "dependencies": {
-    "@chainlink-consumer/contracts": "0.0.1",
+    "@appliedblockchain/chainlink-contracts": "0.0.1",
     "@ethersproject/providers": "^5.4.3",
     "@nomiclabs/buidler": "^1.4.8",
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "hardhat": "^2.0.0"
   },
   "devDependencies": {
-    "@chainlink-consumer/eslint-config": "0.0.1",
+    "@appliedblockchain/chainlink-eslint-config": "0.0.1",
     "@ethersproject/contracts": "^5.4.0",
     "@types/chai": "^4.2.21",
     "@types/chai-as-promised": "^7.1.4",
@@ -52,5 +56,12 @@
   },
   "peerDependencies": {
     "hardhat": "^2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/nomiclabs/hardhat-ts-plugin-boilerplate/issues"
+  },
+  "homepage": "https://github.com/nomiclabs/hardhat-ts-plugin-boilerplate#readme",
+  "directories": {
+    "test": "test"
   }
 }

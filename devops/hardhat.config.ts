@@ -8,9 +8,9 @@ import "@nomiclabs/hardhat-etherscan";
 import "@typechain/hardhat";
 import "hardhat-abi-exporter";
 import "hardhat-deploy";
-import "@chainlink-consumer/plugins-api-consumer";
-import "@chainlink-consumer/plugins-price-consumer";
-import "@chainlink-consumer/plugins-random-number-consumer";
+import "@appliedblockchain/chainlink-plugins-api-consumer";
+import "@appliedblockchain/chainlink-plugins-price-consumer";
+import "@appliedblockchain/chainlink-plugins-random-number-consumer";
 
 import "./tasks/accounts";
 import "./tasks/balance";
@@ -118,10 +118,12 @@ export default {
   external: {
     contracts: [
       {
-        artifacts: "../node_modules/@chainlink-consumer/contracts/artifacts",
+        artifacts:
+          "../node_modules/@appliedblockchain/chainlink-contracts/artifacts",
       },
       {
-        artifacts: "./node_modules/@chainlink-consumer/contracts/artifacts",
+        artifacts:
+          "./node_modules/@appliedblockchain/chainlink-contracts/artifacts",
       },
     ],
   },

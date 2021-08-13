@@ -1,7 +1,7 @@
 {
   "root": true,
   "extends": [
-    "@chainlink-consumer/eslint-config",
+    "@appliedblockchain/chainlink-eslint-config",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jest/recommended"

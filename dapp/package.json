@@ -1,9 +1,9 @@
 {
-  "name": "@chainlink-consumer/dapp",
+  "name": "@appliedblockchain/chainlink-dapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@chainlink-consumer/contracts": "0.0.1",
+    "@appliedblockchain/chainlink-contracts": "0.0.1",
     "@metamask/onboarding": "^1.0.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -45,7 +45,7 @@
     ]
   },
   "devDependencies": {
-    "@chainlink-consumer/eslint-config": "0.0.1",
+    "@appliedblockchain/chainlink-eslint-config": "0.0.1",
     "@types/react-router-dom": "^5.1.8",
     "eslint": "^7.32.0",
     "eslint-plugin-jest": "^24.4.0",

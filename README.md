@@ -11,13 +11,13 @@ A monorepo with fully Chainlink working end to end scenarios. There are tools an
 
 | Package | Description |
 | --- | --- |
-| @chainlink-consumer/contracts |  Smart contracts consumers source code that interact with oracles and Chainlink coordinators.  |
-| @chainlink-consumer/dapp | Example of frontend application that read and update data of Chainlink smart contracts. |
-| @chainlink-consumer/eslint-config | Shareable eslint configuration used in every package of this monorepo. |
-| @chainlink-consumer/plugins-api-consumer | Plugin that extends Hardhat environment with utilities to interact with the API Consumer contract. |
-| @chainlink-consumer/plugins-price-consumer | Plugin that extends Hardhat environment with utilities to interact with the Price Consumer contract. |
-| @chainlink-consumer/plugins-random-number-consumer | Plugin that extends Hardhat environment with utilities to interact with the Verifiable Random Function Consumer contract. |
-| @chainlink-consumer/devops | Hardhat application that provides scripts to deploy and test the contracts. The plugins of this monorepo are setup in this package. |
+| @appliedblockchain/chainlink-contracts |  Smart contracts consumers source code that interact with oracles and Chainlink coordinators.  |
+| @appliedblockchain/chainlink-dapp | Example of frontend application that read and update data of Chainlink smart contracts. |
+| @appliedblockchain/chainlink-eslint-config | Shareable eslint configuration used in every package of this monorepo. |
+| @appliedblockchain/chainlink-plugins-api-consumer | Plugin that extends Hardhat environment with utilities to interact with the API Consumer contract. |
+| @appliedblockchain/chainlink-plugins-price-consumer | Plugin that extends Hardhat environment with utilities to interact with the Price Consumer contract. |
+| @appliedblockchain/chainlink-plugins-random-number-consumer | Plugin that extends Hardhat environment with utilities to interact with the Verifiable Random Function Consumer contract. |
+| @appliedblockchain/chainlink-devops | Hardhat application that provides scripts to deploy and test the contracts. The plugins of this monorepo are setup in this package. |
 
 ## Development Setup
 

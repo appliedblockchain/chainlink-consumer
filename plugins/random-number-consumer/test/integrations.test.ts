@@ -1,9 +1,9 @@
-import LinkTokenABI from "@chainlink-consumer/contracts/abi/LinkToken.json";
-import RandomNumberConsumerABI from "@chainlink-consumer/contracts/abi/RandomNumberConsumer.json";
-import VRFCoordinatorMockABI from "@chainlink-consumer/contracts/abi/VRFCoordinatorMock.json";
-import LinkTokenBytecode from "@chainlink-consumer/contracts/bytecode/LinkToken.json";
-import RandomNumberConsumerBytecode from "@chainlink-consumer/contracts/bytecode/RandomNumberConsumer.json";
-import VRFCoordinatorMockBytecode from "@chainlink-consumer/contracts/bytecode/VRFCoordinatorMock.json";
+import LinkTokenABI from "@appliedblockchain/chainlink-contracts/abi/LinkToken.json";
+import RandomNumberConsumerABI from "@appliedblockchain/chainlink-contracts/abi/RandomNumberConsumer.json";
+import VRFCoordinatorMockABI from "@appliedblockchain/chainlink-contracts/abi/VRFCoordinatorMock.json";
+import LinkTokenBytecode from "@appliedblockchain/chainlink-contracts/bytecode/LinkToken.json";
+import RandomNumberConsumerBytecode from "@appliedblockchain/chainlink-contracts/bytecode/RandomNumberConsumer.json";
+import VRFCoordinatorMockBytecode from "@appliedblockchain/chainlink-contracts/bytecode/VRFCoordinatorMock.json";
 import { Contract } from "@ethersproject/contracts";
 import { assert, expect } from "chai";
 

@@ -19,8 +19,8 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "lint:fix": "wsrun -x @chainlink-consumer/eslint-config lint:fix",
-    "test": "wsrun -x @chainlink-consumer/eslint-config test"
+    "lint:fix": "wsrun -x @appliedblockchain/chainlink-eslint-config lint:fix",
+    "test": "wsrun -x @appliedblockchain/chainlink-eslint-config test"
   },
   "lint-staged": {
     "src/**/*.{js,ts,jsx,tsx}": [

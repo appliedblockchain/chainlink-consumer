@@ -1,5 +1,5 @@
-import { PriceConsumerV3 } from "@chainlink-consumer/contracts/types/PriceConsumerV3.d";
-import PriceConsumerV3ABI from "@chainlink-consumer/contracts/abi/PriceConsumerV3.json";
+import { PriceConsumerV3 } from "@appliedblockchain/chainlink-contracts/types/PriceConsumerV3.d";
+import PriceConsumerV3ABI from "@appliedblockchain/chainlink-contracts/abi/PriceConsumerV3.json";
 import { Contract, ethers } from "ethers";
 
 export default function getPriceConsumer(

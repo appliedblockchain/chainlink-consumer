@@ -1,4 +1,4 @@
-import RandomNumberConsumerABI from "@chainlink-consumer/contracts/abi/APIConsumer.json";
+import RandomNumberConsumerABI from "@appliedblockchain/chainlink-contracts/abi/APIConsumer.json";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { Contract } from "ethers";
 

@@ -1,5 +1,5 @@
-import { APIConsumer } from "@chainlink-consumer/contracts/types/APIConsumer";
-import APIConsumerABI from "@chainlink-consumer/contracts/abi/APIConsumer.json";
+import { APIConsumer } from "@appliedblockchain/chainlink-contracts/types/APIConsumer";
+import APIConsumerABI from "@appliedblockchain/chainlink-contracts/abi/APIConsumer.json";
 import { Contract, ethers } from "ethers";
 
 export default function getApiConsumerContract(

@@ -1,6 +1,6 @@
 import { task } from "hardhat/config";
 import { getNetworkFromName } from "../helper-hardhat-config";
-import ERC677ABI from "@chainlink-consumer/contracts/abi/ERC677.json";
+import ERC677ABI from "@appliedblockchain/chainlink-contracts/abi/ERC677.json";
 
 task("fund-link", "Funds a contract with LINK")
   .addParam("contract", "The address of the contract that requires LINK")

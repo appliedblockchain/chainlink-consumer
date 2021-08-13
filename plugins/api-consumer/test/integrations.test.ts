@@ -1,9 +1,9 @@
-import APIConsumerABI from "@chainlink-consumer/contracts/abi/APIConsumer.json";
-import LinkTokenABI from "@chainlink-consumer/contracts/abi/LinkToken.json";
-import MockOracleABI from "@chainlink-consumer/contracts/abi/MockOracle.json";
-import APIConsumerBytecode from "@chainlink-consumer/contracts/bytecode/APIConsumer.json";
-import LinkTokenBytecode from "@chainlink-consumer/contracts/bytecode/LinkToken.json";
-import MockOracleBytecode from "@chainlink-consumer/contracts/bytecode/MockOracle.json";
+import APIConsumerABI from "@appliedblockchain/chainlink-contracts/abi/APIConsumer.json";
+import LinkTokenABI from "@appliedblockchain/chainlink-contracts/abi/LinkToken.json";
+import MockOracleABI from "@appliedblockchain/chainlink-contracts/abi/MockOracle.json";
+import APIConsumerBytecode from "@appliedblockchain/chainlink-contracts/bytecode/APIConsumer.json";
+import LinkTokenBytecode from "@appliedblockchain/chainlink-contracts/bytecode/LinkToken.json";
+import MockOracleBytecode from "@appliedblockchain/chainlink-contracts/bytecode/MockOracle.json";
 import { Contract } from "@ethersproject/contracts";
 import { expect, assert } from "chai";
 

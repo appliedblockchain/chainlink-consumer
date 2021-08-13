@@ -11,19 +11,19 @@ This plugin will help you read data from a Chainlink API Consumer and call funct
 To install this plugin use:
 
 ```bash
-npm install @chainlink-consumer/plugins-api-consumer @nomiclabs/hardhat-ethers --save
+npm install @appliedblockchain/chainlink-plugins-api-consumer @nomiclabs/hardhat-ethers --save
 ```
 
 Import the plugin in your `hardhat.config.js`:
 
 ```js
-require("@chainlink-consumer/plugins-api-consumer");
+require("@appliedblockchain/chainlink-plugins-api-consumer");
 ```
 
 Or if you are using TypeScript, in your `hardhat.config.ts`:
 
 ```ts
-import "@chainlink-consumer/plugins-api-consumer";
+import "@appliedblockchain/chainlink-plugins-api-consumer";
 ```
 
 

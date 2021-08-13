@@ -1,5 +1,5 @@
 import { Contract } from "ethers";
-import RandomNumberConsumerABI from "@chainlink-consumer/contracts/abi/RandomNumberConsumer.json";
+import RandomNumberConsumerABI from "@appliedblockchain/chainlink-contracts/abi/RandomNumberConsumer.json";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 
 export default (contractAddr: string, signer: SignerWithAddress): Contract => {

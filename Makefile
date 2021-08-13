@@ -2,5 +2,5 @@ install:
 	yarn install
 
 build:
-	yarn workspace @chainlink-consumer/contracts compile
-	yarn wsrun -x @chainlink-consumer/eslint-config -x @chainlink-consumer/plugins-consumer --stages build
+	yarn workspace @appliedblockchain/chainlink-contracts compile
+	yarn wsrun -x @appliedblockchain/chainlink-eslint-config -x @appliedblockchain/chainlink-plugins-consumer --stages build

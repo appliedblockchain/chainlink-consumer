@@ -1,5 +1,5 @@
 {
-  "name": "@chainlink-consumer/plugins-random-number-consumer",
+  "name": "@appliedblockchain/chainlink-plugins-random-number-consumer",
   "version": "0.0.1",
   "description": "Hardhat TypeScript plugin boilerplate",
   "repository": "github:nomiclabs/hardhat-ts-plugin-boilerplate",
@@ -19,7 +19,8 @@
     "test": "mocha --exit --recursive 'test/**/*.test.ts'",
     "test:watch": "mocha --exit --recursive -w 'test/**/*.test.ts'",
     "build": "tsc",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "prepublish": "npm run build"
   },
   "files": [
     "dist/",
@@ -28,8 +29,8 @@
     "README.md"
   ],
   "devDependencies": {
-    "@chainlink-consumer/contracts": "0.0.1",
-    "@chainlink-consumer/eslint-config": "0.0.1",
+    "@appliedblockchain/chainlink-contracts": "0.0.1",
+    "@appliedblockchain/chainlink-eslint-config": "0.0.1",
     "@ethersproject/contracts": "^5.4.0",
     "@nomiclabs/buidler": "^1.4.8",
     "@nomiclabs/hardhat-ethers": "^2.0.2",

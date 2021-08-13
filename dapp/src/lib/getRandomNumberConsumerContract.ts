@@ -1,5 +1,5 @@
-import { RandomNumberConsumer } from "@chainlink-consumer/contracts/types/RandomNumberConsumer.d";
-import RandomNumberConsumerABI from "@chainlink-consumer/contracts/abi/RandomNumberConsumer.json";
+import { RandomNumberConsumer } from "@appliedblockchain/chainlink-contracts/types/RandomNumberConsumer.d";
+import RandomNumberConsumerABI from "@appliedblockchain/chainlink-contracts/abi/RandomNumberConsumer.json";
 import { Contract, ethers } from "ethers";
 
 export default function getRandomNumberConsumer(
