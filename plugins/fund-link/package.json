@@ -1,8 +1,8 @@
 {
-  "name": "@appliedblockchain/chainlink-plugins-random-number-consumer",
-  "version": "0.0.4",
-  "description": "Hardhat TypeScript plugin that interacts with chainlink VRF consumer contract.",
-  "repository": "https://github.com/appliedblockchain/chainlink-consumer/tree/master/plugins/random-number-consumer",
+  "name": "@appliedblockchain/chainlink-plugins-fund-link",
+  "version": "0.0.1",
+  "description": "Hardhat TypeScript plugin that transfers Link token between accounts.",
+  "repository": "https://github.com/appliedblockchain/chainlink-consumer/tree/master/plugins/fund-link",
   "license": "MIT",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "lint:fix": "eslint . --ext .js --ext .ts  --fix",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .js --ext .ts  ",
     "test": "mocha --exit --recursive 'test/**/*.test.ts'",
     "test:watch": "mocha --exit --recursive -w 'test/**/*.test.ts'",
     "build": "tsc",
@@ -22,7 +22,7 @@
     "prepublishOnly": "npm run build"
   },
   "files": [
-    "dist/",
+    "dist/src/",
     "src/",
     "LICENSE",
     "README.md"
@@ -30,7 +30,6 @@
   "devDependencies": {
     "@appliedblockchain/chainlink-contracts": "0.0.4",
     "@appliedblockchain/chainlink-eslint-config": "0.0.1",
-    "@ethersproject/contracts": "^5.4.0",
     "@nomiclabs/buidler": "^1.4.8",
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@types/chai": "^4.2.21",
@@ -51,7 +50,5 @@
   "peerDependencies": {
     "hardhat": "^2.0.0"
   },
-  "dependencies": {
-    "@ethersproject/providers": "^5.4.3"
-  }
+  "dependencies": {}
 }

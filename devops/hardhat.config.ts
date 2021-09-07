@@ -11,10 +11,10 @@ import "hardhat-deploy";
 import "@appliedblockchain/chainlink-plugins-api-consumer";
 import "@appliedblockchain/chainlink-plugins-price-consumer";
 import "@appliedblockchain/chainlink-plugins-random-number-consumer";
+import "@appliedblockchain/chainlink-plugins-fund-link";
 
 import "./tasks/accounts";
 import "./tasks/balance";
-import "./tasks/fund-link";
 import "./tasks/withdraw-link";
 import "./tasks/block-number";
 import "./tasks/block-number";
