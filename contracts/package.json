@@ -1,13 +1,22 @@
 {
   "name": "@appliedblockchain/chainlink-contracts",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.4",
+  "description": "Chainlink consumer contracts source code.",
+  "repository": "https://github.com/appliedblockchain/chainlink-consumer/tree/master/contracts",
+  "files": [
+    "abi/",
+    "bytecode/",
+    "contracts/",
+    "LICENSE",
+    "README.md",
+    "box-img-lg.png"
+  ],
   "scripts": {
     "test": "hardhat test",
     "lint": "eslint . --ext .js --ext .ts ",
     "lint:fix": "eslint . --ext .js --ext .ts  --fix",
     "compile": "hardhat compile",
-    "prepare": "npm run compile && rm -rf artifacts && rm -rf cache",
+    "prepublishOnly": "npm run compile && rm -rf artifacts && rm -rf cache",
     "build": "tsc"
   },
   "license": "MIT",

@@ -1,0 +1,5 @@
+{
+  "root": true,
+  "extends": ["@appliedblockchain/chainlink-eslint-config"],
+  "env": { "node": true }
+}

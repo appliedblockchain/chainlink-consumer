@@ -1,12 +1,8 @@
 {
   "name": "@appliedblockchain/chainlink-plugins-api-consumer",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "Hardhat TypeScript plugin that interacts with chainlink api consumer contract.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nomiclabs/hardhat-ts-plugin-boilerplate.git"
-  },
-  "author": "Nomic Labs LLC",
+  "repository": "https://github.com/appliedblockchain/chainlink-consumer/tree/master/plugins/api-consumer",
   "license": "MIT",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -23,7 +19,7 @@
     "test:watch": "mocha --exit --recursive -w './test/**/*.test.ts'",
     "build": "tsc",
     "watch": "tsc -w",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "files": [
     "dist/src/",
@@ -32,7 +28,7 @@
     "README.md"
   ],
   "dependencies": {
-    "@appliedblockchain/chainlink-contracts": "0.0.2",
+    "@appliedblockchain/chainlink-contracts": "0.0.4",
     "@ethersproject/providers": "^5.4.3",
     "@nomiclabs/buidler": "^1.4.8",
     "@nomiclabs/hardhat-ethers": "^2.0.2",

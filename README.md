@@ -24,11 +24,11 @@ A monorepo with fully Chainlink working end to end scenarios. There are tools an
 1. Install NodeJS 12.18 & Yarn
 2. Install repositories dependencies
 ```
-$ make install
+$ yarn install
 ```
 3. Build all packages
 ```
-$ make build
+$ yarn build
 ```
 
 ## Development Tips

@@ -6,9 +6,7 @@
       "dapp",
       "devops",
       "eslint-config",
-      "plugins/api-consumer",
-      "plugins/price-consumer",
-      "plugins/random-number-consumer"
+      "plugins/*"
     ],
     "nohoist": [
       "**/@types/mocha",
@@ -18,8 +16,11 @@
     ]
   },
   "scripts": {
-    "prepare": "husky install",
+    "build": "npm run compile:contracts & npm run build:packages",
+    "build:packages": "yarn wsrun -x @appliedblockchain/chainlink-eslint-config -x @appliedblockchain/chainlink-plugins-consumer --stages build",
+    "compile:contracts": "yarn workspace @appliedblockchain/chainlink-contracts compile",
     "lint:fix": "wsrun -x @appliedblockchain/chainlink-eslint-config lint:fix",
+    "prepare": "husky install",
     "test": "wsrun -x @appliedblockchain/chainlink-eslint-config test"
   },
   "lint-staged": {
