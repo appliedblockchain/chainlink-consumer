@@ -31,6 +31,12 @@ const RINKEBY_RPC_URL =
 const KOVAN_RPC_URL =
   process.env.KOVAN_RPC_URL ||
   "https://eth-kovan.alchemyapi.io/v2/qDK0PvoVPRUMt99Z6r71gXp7wjiPx2HF";
+const POLYGON_RPC_URL =
+  process.env.POLYGON_RPC_URL ||
+  "https://polygon-mainnet.g.alchemyapi.io/v2/your-api-key";
+const MUMBAI_RPC_URL =
+  process.env.MUMBAI_RPC_URL ||
+  "https://polygon-mumbai.g.alchemyapi.io/v2/your-api-key";
 const MNEMONIC = process.env.MNEMONIC || "your mnemonic";
 const ETHERSCAN_API_KEY =
   process.env.ETHERSCAN_API_KEY || "Your etherscan API key";
@@ -63,6 +69,22 @@ export default {
     },
     rinkeby: {
       url: RINKEBY_RPC_URL,
+      // accounts: [PRIVATE_KEY],
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
+    },
+    polygon: {
+      url: POLYGON_RPC_URL,
+      // accounts: [PRIVATE_KEY],
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
+    },
+    mumbai: {
+      url: MUMBAI_RPC_URL,
       // accounts: [PRIVATE_KEY],
       accounts: {
         mnemonic: MNEMONIC,
