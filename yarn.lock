@@ -213,6 +213,11 @@
     ethers "~4.0.4"
     lodash "^4.17.11"
 
+"@appliedblockchain/chainlink-plugins-fund-link@0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@appliedblockchain/chainlink-plugins-fund-link/-/chainlink-plugins-fund-link-0.0.1.tgz#2e0339283083073a69fb8c9fa2050385b3fddfd2"
+  integrity sha512-2LjexuACeLKsjSEeDwJ/oBJiILA1KgqjzvQWP9NddQqM7QONQtAVlCcyCz2k4CjspIAwFQsTxW4CosXTJbRMyg==
+
 "@babel/code-frame@7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.10.4.tgz#168da1a36e90da68ae8d49c0f1b48c7c6249213a"

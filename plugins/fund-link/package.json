@@ -1,6 +1,6 @@
 {
   "name": "@appliedblockchain/chainlink-plugins-fund-link",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hardhat TypeScript plugin that transfers Link token between accounts.",
   "repository": "https://github.com/appliedblockchain/chainlink-consumer/tree/master/plugins/fund-link",
   "license": "MIT",
@@ -28,7 +28,6 @@
     "README.md"
   ],
   "devDependencies": {
-    "@appliedblockchain/chainlink-contracts": "0.0.4",
     "@appliedblockchain/chainlink-eslint-config": "0.0.1",
     "@nomiclabs/buidler": "^1.4.8",
     "@types/chai": "^4.2.21",
@@ -47,6 +46,8 @@
     "typescript": "^4.0.3"
   },
   "peerDependencies": {
+    "@appliedblockchain/chainlink-contracts": "0.0.4",
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
     "hardhat": "^2.0.0"
   },
   "dependencies": {
