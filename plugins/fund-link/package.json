@@ -49,8 +49,5 @@
     "@appliedblockchain/chainlink-contracts": "0.0.4",
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "hardhat": "^2.0.0"
-  },
-  "dependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.0.2"
   }
 }
