@@ -10,6 +10,18 @@ const explorers: { [chainID: string]: string } = {
   "5": "https://goerli.etherscan.io",
   "137": "https://polygonscan.com",
   "80001": "https://mumbai.polygonscan.com",
+  "56": "https://bscscan.com",
+  "97": "https://testnet.bscscan.com",
+  "43114": "https://snowtrace.io",
+  "43113": "https://testnet.snowtrace.io",
+  "30": "https://explorer.rsk.co",
+  "100": "https://blockscout.com/xdai/mainnet",
+  "250": "https://ftmscan.com",
+  "4002": "https://testnet.ftmscan.com",
+  "421611": "https://testnet.arbiscan.io",
+  "128": "https://hecoscan.xyz",
+  "10": "https://optimistic.etherscan.io",
+  "69": "https://kovan-optimistic.etherscan.io",
 };
 
 interface Props {
