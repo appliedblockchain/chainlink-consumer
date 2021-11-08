@@ -37,6 +37,42 @@ const POLYGON_RPC_URL =
 const MUMBAI_RPC_URL =
   process.env.MUMBAI_RPC_URL ||
   "https://polygon-mumbai.g.alchemyapi.io/v2/your-api-key";
+const BSC_RPC_URL =
+  process.env.BSC_RPC_URL ||
+  "https://bsc-dataseed.binance.org";
+const BSC_TESTNET_RPC_URL =
+  process.env.BSC_TESTNET_RPC_URL ||
+  "https://data-seed-prebsc-1-s1.binance.org:8545";
+const AVALANCHE_RPC_URL =
+  process.env.AVALANCHE_RPC_URL ||
+  "https://api.avax.network/ext/bc/C/rpc";
+const AVALANCHE_FUFI_RPC_URL =
+  process.env.AVALANCHE_FUFI_RPC_URL ||
+  "https://api.avax-test.network/ext/bc/C/rpc";
+const RSK_RPC_URL =
+  process.env.RSK_RPC_URL ||
+  "https://public-node.rsk.co";
+const XDAI_RPC_URL =
+  process.env.XDAI_RPC_URL ||
+  "https://rpc.xdaichain.com";
+const FANTOM_RPC_URL =
+  process.env.FANTOM_RPC_URL ||
+  "https://rpc.ftm.tools";
+const FANTOM_TESTNET_RPC_URL =
+  process.env.FANTOM_TESTNET_RPC_URL ||
+  "https://rpc.testnet.fantom.network";
+const HUOBI_RPC_URL =
+  process.env.HUOBI_RPC_URL ||
+  "https://http-mainnet-node.huobichain.com";
+const ARBITRUM_RINKEBY_RPC_URL =
+  process.env.ARBITRUM_RINKEBY_RPC_URL ||
+  "https://arb-rinkeby.g.alchemy.com/v2/your-api-key";
+const OPTIMISM_RPC_URL =
+  process.env.OPTIMISM_RPC_URL ||
+  "https://opt-mainnet.g.alchemy.com/v2/your-api-key";
+const OPTIMISM_KOVAN_RPC_URL =
+  process.env.OPTIMISM_KOVAN_RPC_URL ||
+  "https://opt-kovan.g.alchemy.com/v2/your-api-key";
 const MNEMONIC = process.env.MNEMONIC || "your mnemonic";
 const ETHERSCAN_API_KEY =
   process.env.ETHERSCAN_API_KEY || "Your etherscan API key";
@@ -85,6 +121,102 @@ export default {
     },
     mumbai: {
       url: MUMBAI_RPC_URL,
+      // accounts: [PRIVATE_KEY],
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
+    },
+    bsc: {
+      url: BSC_RPC_URL,
+      // accounts: [PRIVATE_KEY],
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
+    },
+    'bsc-testnet': {
+      url: BSC_TESTNET_RPC_URL,
+      // accounts: [PRIVATE_KEY],
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
+    },
+    avalanche: {
+      url: AVALANCHE_RPC_URL,
+      // accounts: [PRIVATE_KEY],
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
+    },
+    'avalanche-fufi': {
+      url: AVALANCHE_FUFI_RPC_URL,
+      // accounts: [PRIVATE_KEY],
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
+    },
+    rsk: {
+      url: RSK_RPC_URL,
+      // accounts: [PRIVATE_KEY],
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
+    },
+    xdai: {
+      url: XDAI_RPC_URL,
+      // accounts: [PRIVATE_KEY],
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
+    },
+    fantom: {
+      url: FANTOM_RPC_URL,
+      // accounts: [PRIVATE_KEY],
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
+    },
+    'fantom-testnet': {
+      url: FANTOM_TESTNET_RPC_URL,
+      // accounts: [PRIVATE_KEY],
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
+    },
+    huobi: {
+      url: HUOBI_RPC_URL,
+      // accounts: [PRIVATE_KEY],
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
+    },
+    'arbitrum-rinkeby': {
+      url: ARBITRUM_RINKEBY_RPC_URL,
+      // accounts: [PRIVATE_KEY],
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
+    },
+    'optimism': {
+      url: OPTIMISM_RPC_URL,
+      // accounts: [PRIVATE_KEY],
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
+    },
+    'optimism-kovan': {
+      url: OPTIMISM_KOVAN_RPC_URL,
       // accounts: [PRIVATE_KEY],
       accounts: {
         mnemonic: MNEMONIC,

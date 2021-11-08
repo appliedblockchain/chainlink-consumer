@@ -86,6 +86,85 @@ export const networkConfig: { [key: string]: NetworkConfig } = {
     fee: "100000000000000",
     fundAmount: "1000000000000000000",
   },
+  "56": {
+    name: "bsc",
+    linkToken: "0x404460c6a5ede2d891e8297795264fde62adbb75",
+    ethUsdPriceFeed: "0x9ef1B8c0E4F7dc8bF5719Ea496883DC6401d5b2e",
+    keyHash:
+      "0xc251acd21ec4fb7f31bb8868288bfdbaeb4fbfec2df3735ddbd4f7dc8d60103c",
+    vrfCoordinator: "0x747973a5A2a4Ae1D3a8fDF5479f1514F65Db9C31",
+    fee: "200000000000000000",
+    fundAmount: "2000000000000000000",
+  },
+  "97": {
+    name: "bsc-testnet",
+    linkToken: "0x84b9b910527ad5c03a9ca831909e21e236ea7b06",
+    ethUsdPriceFeed: "0x143db3CEEfbdfe5631aDD3E50f7614B6ba708BA7",
+    keyHash:
+      "0xcaf3c3727e033261d383b315559476f48034c13b18f8cafed4d871abe5049186",
+    vrfCoordinator: "0xa555fC018435bef5A13C6c6870a9d4C11DEC329C",
+    fee: "100000000000000000",
+    fundAmount: "1000000000000000000",
+  },
+  "43114": {
+    name: "avalanche",
+    linkToken: "0x5947BB275c521040051D82396192181b413227A3",
+    ethUsdPriceFeed: "0x976B3D034E162d8bD72D6b9C989d545b839003b0",
+    fundAmount: "1000000000000000000",
+  },
+  "43113": {
+    name: "avalanche-fuji",
+    linkToken: "0x0b9d5D9136855f6FEc3c0993feE6E9CE8a297846",
+    ethUsdPriceFeed: "0x86d67c3D38D2bCeE722E601025C25a575021c6EA",
+    fundAmount: "1000000000000000000",
+  },
+  "30": {
+    name: "rsk",
+    linkToken: "0x14adae34bef7ca957ce2dde5add97ea050123827",
+    fundAmount: "1000000000000000000",
+  },
+  "100": {
+    name: "xdai",
+    linkToken: "0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2",
+    ethUsdPriceFeed: "0xa767f745331D267c7751297D982b050c93985627",
+    fundAmount: "1000000000000000000",
+  },
+  "250": {
+    name: "fantom",
+    linkToken: "0x6F43FF82CCA38001B6699a8AC47A2d0E66939407",
+    ethUsdPriceFeed: "0x11DdD3d147E5b83D01cee7070027092397d63658",
+    fundAmount: "1000000000000000000",
+  },
+  "4002": {
+    name: "fantom-testnet",
+    linkToken: "0xfaFedb041c0DD4fA2Dc0d87a6B0979Ee6FA7af5F",
+    ethUsdPriceFeed: "0xB8C458C957a6e6ca7Cc53eD95bEA548c52AFaA24",
+    fundAmount: "1000000000000000000",
+  },
+  "421611": {
+    name: "arbitrum-rinkeby",
+    linkToken: "0x615fBe6372676474d9e6933d310469c9b68e9726",
+    ethUsdPriceFeed: "0x5f0423B1a6935dc5596e7A24d98532b67A0AeFd8",
+    fundAmount: "1000000000000000000",
+  },
+  "128": {
+    name: "huobi",
+    linkToken: "0x9e004545c59D359F6B7BFB06a26390b087717b42",
+    ethUsdPriceFeed: "0x5Fa530068e0F5046479c588775c157930EF0Dff0",
+    fundAmount: "1000000000000000000",
+  },
+  "10": {
+    name: "optimism",
+    linkToken: "0x350a791Bfc2C21F9Ed5d10980Dad2e2638ffa7f6",
+    ethUsdPriceFeed: "0xA969bEB73d918f6100163Cd0fba3C586C269bee1",
+    fundAmount: "1000000000000000000",
+  },
+  "69": {
+    name: "optimism-kovan",
+    linkToken: "0x4911b761993b9c8c0d14Ba2d86902AF6B0074F5B",
+    ethUsdPriceFeed: "0xCb7895bDC70A1a1Dce69b689FD7e43A627475A06",
+    fundAmount: "1000000000000000000",
+  },
 };
 
 export const developmentChains = ["hardhat", "localhost"];
