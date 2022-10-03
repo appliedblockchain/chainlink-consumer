@@ -37,6 +37,8 @@ const POLYGON_RPC_URL =
 const MUMBAI_RPC_URL =
   process.env.MUMBAI_RPC_URL ||
   "https://polygon-mumbai.g.alchemyapi.io/v2/your-api-key";
+const BAOBAB_RPC_URL =
+  process.env.BAOBAB_RPC_URL || "https://api.baobab.klaytn.net:8651/"
 const MNEMONIC = process.env.MNEMONIC || "your mnemonic";
 const ETHERSCAN_API_KEY =
   process.env.ETHERSCAN_API_KEY || "Your etherscan API key";
@@ -96,6 +98,13 @@ export default {
       accounts: {
         mnemonic: MNEMONIC,
       },
+    },
+    baobab: {
+      url: BAOBAB_RPC_URL,
+      accounts: {
+        mnemonic: MNEMONIC,
+      },
+      saveDeployments: true,
     },
   },
   etherscan: {

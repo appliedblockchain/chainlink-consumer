@@ -10,6 +10,7 @@ const explorers: { [chainID: string]: string } = {
   "5": "https://goerli.etherscan.io",
   "137": "https://polygonscan.com",
   "80001": "https://mumbai.polygonscan.com",
+  "1001": "https://baobab.scope.klaytn.com"
 };
 
 interface Props {
