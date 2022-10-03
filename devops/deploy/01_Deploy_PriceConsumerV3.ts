@@ -9,20 +9,22 @@ const DeployPriceConsumer: DeployFunction = async ({
   const { deploy, log } = deployments;
   const { deployer } = await getNamedAccounts();
   const chainId = await getChainId();
-  let ethUsdPriceFeedAddress;
+  let priceFeedAddress;
   if (chainId == "31337") {
     const EthUsdAggregator = await deployments.get("EthUsdAggregator");
-    ethUsdPriceFeedAddress = EthUsdAggregator.address;
+    priceFeedAddress = EthUsdAggregator.address;
+  } else if (chainId === "1001") {
+    priceFeedAddress = networkConfig[chainId]["linkKlayPriceFeed"]
   } else {
     const networkConfig = getNetworkFromName(chainId);
-    ethUsdPriceFeedAddress = networkConfig?.ethUsdPriceFeed;
+    priceFeedAddress = networkConfig?.ethUsdPriceFeed;
   }
   // Price Feed Address, values can be obtained at https://docs.chain.link/docs/reference-contracts
   // Default one below is ETH/USD contract on Kovan
   log("----------------------------------------------------");
   const priceConsumerV3 = await deploy("PriceConsumerV3", {
     from: deployer,
-    args: [ethUsdPriceFeedAddress],
+    args: [priceFeedAddress],
     log: true,
   });
   log("Run Price Feed contract with command:");
